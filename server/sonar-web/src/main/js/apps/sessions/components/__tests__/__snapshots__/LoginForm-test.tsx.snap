@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expands more options 1`] = `
+<div
+  id="login_form"
+>
+  <h1
+    className="login-title text-center"
+  >
+    login.login_to_sonarqube
+  </h1>
+  <OAuthProviders
+    identityProviders={
+      Array [
+        Object {
+          "backgroundColor": "#000",
+          "iconPath": "/some/path",
+          "key": "foo",
+          "name": "foo",
+        },
+      ]
+    }
+    returnTo=""
+  />
+  <div
+    className="text-center"
+  >
+    <a
+      className="small text-muted js-more-options"
+      href="#"
+      onClick={[Function]}
+    >
+      login.more_options
+    </a>
+  </div>
+</div>
+`;
+
+exports[`expands more options 2`] = `
+<div
+  id="login_form"
+>
+  <h1
+    className="login-title text-center"
+  >
+    login.login_to_sonarqube
+  </h1>
+  <OAuthProviders
+    identityProviders={
+      Array [
+        Object {
+          "backgroundColor": "#000",
+          "iconPath": "/some/path",
+          "key": "foo",
+          "name": "foo",
+        },
+      ]
+    }
+    returnTo=""
+  />
+  <form
+    onSubmit={[Function]}
+  >
+    <Connect(GlobalMessages) />
+    <div
+      className="big-spacer-bottom"
+    >
+      <label
+        className="login-label"
+        htmlFor="login"
+      >
+        login
+      </label>
+      <input
+        autoFocus={true}
+        className="login-input"
+        id="login"
+        maxLength={255}
+        name="login"
+        onChange={[Function]}
+        placeholder="login"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="big-spacer-bottom"
+    >
+      <label
+        className="login-label"
+        htmlFor="password"
+      >
+        password
+      </label>
+      <input
+        className="login-input"
+        id="password"
+        name="password"
+        onChange={[Function]}
+        placeholder="password"
+        required={true}
+        type="password"
+        value=""
+      />
+    </div>
+    <div>
+      <div
+        className="text-right overflow-hidden"
+      >
+        <button
+          name="commit"
+          type="submit"
+        >
+          sessions.log_in
+        </button>
+        <Link
+          className="spacer-left"
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/"
+        >
+          cancel
+        </Link>
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`logs in with identity provider 1`] = `
+<div
+  id="login_form"
+>
+  <h1
+    className="login-title text-center"
+  >
+    login.login_to_sonarqube
+  </h1>
+  <OAuthProviders
+    identityProviders={
+      Array [
+        Object {
+          "backgroundColor": "#000",
+          "iconPath": "/some/path",
+          "key": "foo",
+          "name": "foo",
+        },
+      ]
+    }
+    returnTo=""
+  />
+  <div
+    className="text-center"
+  >
+    <a
+      className="small text-muted js-more-options"
+      href="#"
+      onClick={[Function]}
+    >
+      login.more_options
+    </a>
+  </div>
+</div>
+`;
+
+exports[`logs in with simple credentials 1`] = `
+<div
+  id="login_form"
+>
+  <h1
+    className="login-title text-center"
+  >
+    login.login_to_sonarqube
+  </h1>
+  <form
+    onSubmit={[Function]}
+  >
+    <Connect(GlobalMessages) />
+    <div
+      className="big-spacer-bottom"
+    >
+      <label
+        className="login-label"
+        htmlFor="login"
+      >
+        login
+      </label>
+      <input
+        autoFocus={true}
+        className="login-input"
+        id="login"
+        maxLength={255}
+        name="login"
+        onChange={[Function]}
+        placeholder="login"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="big-spacer-bottom"
+    >
+      <label
+        className="login-label"
+        htmlFor="password"
+      >
+        password
+      </label>
+      <input
+        className="login-input"
+        id="password"
+        name="password"
+        onChange={[Function]}
+        placeholder="password"
+        required={true}
+        type="password"
+        value=""
+      />
+    </div>
+    <div>
+      <div
+        className="text-right overflow-hidden"
+      >
+        <button
+          name="commit"
+          type="submit"
+        >
+          sessions.log_in
+        </button>
+        <Link
+          className="spacer-left"
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/"
+        >
+          cancel
+        </Link>
+      </div>
+    </div>
+  </form>
+</div>
+`;

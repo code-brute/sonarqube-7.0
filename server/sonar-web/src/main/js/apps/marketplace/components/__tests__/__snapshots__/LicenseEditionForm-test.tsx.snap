@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display correctly 1`] = `
+<Modal
+  contentLabel="marketplace.upgrade_to_x.Foo"
+  onRequestClose={[MockFunction]}
+>
+  <header
+    className="modal-head"
+  >
+    <h2>
+      marketplace.upgrade_to_x.Foo
+    </h2>
+  </header>
+  <LicenseEditionSet
+    className="modal-body"
+    edition={
+      Object {
+        "downloadUrl": "download_url",
+        "homeUrl": "more_url",
+        "key": "foo",
+        "licenseRequestUrl": "license_url",
+        "name": "Foo",
+        "textDescription": "Foo desc",
+      }
+    }
+    editions={
+      Array [
+        Object {
+          "downloadUrl": "download_url",
+          "homeUrl": "more_url",
+          "key": "foo",
+          "licenseRequestUrl": "license_url",
+          "name": "Foo",
+          "textDescription": "Foo desc",
+        },
+      ]
+    }
+    updateLicense={[Function]}
+  />
+  <footer
+    className="modal-foot"
+  >
+    <a
+      className="js-modal-close"
+      href="#"
+      onClick={[Function]}
+    >
+      cancel
+    </a>
+  </footer>
+</Modal>
+`;

@@ -1,0 +1,39 @@
+/*
+ * SonarQube
+ * Copyright (C) 2009-2018 SonarSource SA
+ * mailto:info AT sonarsource DOT com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+// @flow
+import React from 'react';
+import { shallow } from 'enzyme';
+import ApplicationQualityGate from '../ApplicationQualityGate';
+
+it('renders', () => {
+  const wrapper = shallow(<ApplicationQualityGate component={{ key: 'foo' }} />);
+  expect(wrapper).toMatchSnapshot();
+  wrapper.setState({
+    loading: false,
+    metrics: {},
+    status: 'ERROR',
+    projects: [
+      { conditions: [], key: 'project1', name: 'project1', status: 'ERROR' },
+      { conditions: [], key: 'project2', name: 'project2', status: 'OK' },
+      { conditions: [], key: 'project3', name: 'project3', status: 'WARN' }
+    ]
+  });
+  expect(wrapper).toMatchSnapshot();
+});

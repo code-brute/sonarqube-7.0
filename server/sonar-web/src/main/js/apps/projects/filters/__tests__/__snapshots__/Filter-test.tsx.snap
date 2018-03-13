@@ -1,0 +1,432 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`highlights under 1`] = `
+<div
+  className="search-navigator-facet-box"
+  data-key="foo"
+>
+  <div
+    className="search-navigator-facet-list projects-facet-list"
+  >
+    <a
+      className="facet search-navigator-facet projects-facet"
+      data-key={1}
+      href="#"
+      key="1"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        1
+      </span>
+    </a>
+    <div
+      className="search-navigator-facet-highlight-under-container"
+    >
+      <a
+        className="facet search-navigator-facet projects-facet"
+        data-key={2}
+        href="#"
+        key="2"
+        onClick={[Function]}
+      >
+        <span
+          className="facet-name"
+        >
+          2
+        </span>
+      </a>
+      <a
+        className="facet search-navigator-facet projects-facet"
+        data-key={3}
+        href="#"
+        key="3"
+        onClick={[Function]}
+      >
+        <span
+          className="facet-name"
+        >
+          3
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`hightlights under selected 1`] = `
+<div
+  className="search-navigator-facet-box"
+  data-key="foo"
+>
+  <div
+    className="search-navigator-facet-list projects-facet-list"
+  >
+    <a
+      className="facet search-navigator-facet projects-facet"
+      data-key={1}
+      href="#"
+      key="1"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        1
+      </span>
+    </a>
+    <div
+      className="search-navigator-facet-highlight-under-container"
+    >
+      <a
+        className="facet search-navigator-facet projects-facet active"
+        data-key={2}
+        href="#"
+        key="2"
+        onClick={[Function]}
+      >
+        <span
+          className="facet-name"
+        >
+          2
+        </span>
+      </a>
+      <a
+        className="facet search-navigator-facet projects-facet"
+        data-key={3}
+        href="#"
+        key="3"
+        onClick={[Function]}
+      >
+        <span
+          className="facet-name"
+        >
+          3
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders 1`] = `
+<div
+  className="search-navigator-facet-box"
+  data-key="foo"
+>
+  <div
+    className="search-navigator-facet-list projects-facet-list"
+  >
+    <a
+      className="facet search-navigator-facet projects-facet"
+      data-key={1}
+      href="#"
+      key="1"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        1
+      </span>
+    </a>
+    <a
+      className="facet search-navigator-facet projects-facet"
+      data-key={2}
+      href="#"
+      key="2"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        2
+      </span>
+    </a>
+    <a
+      className="facet search-navigator-facet projects-facet"
+      data-key={3}
+      href="#"
+      key="3"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        3
+      </span>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`renders facet bar chart 1`] = `
+<div
+  className="search-navigator-facet-box"
+  data-key="foo"
+>
+  <div
+    className="search-navigator-facet-list projects-facet-list"
+  >
+    <a
+      className="facet search-navigator-facet projects-facet"
+      data-key="a"
+      href="#"
+      key="a"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        a
+      </span>
+      <span
+        className="facet-stat"
+      >
+        17
+        <div
+          className="projects-facet-bar"
+        >
+          <div
+            className="projects-facet-bar-inner"
+            style={
+              Object {
+                "width": 42.5,
+              }
+            }
+          />
+        </div>
+      </span>
+    </a>
+    <a
+      className="facet search-navigator-facet projects-facet"
+      data-key="b"
+      href="#"
+      key="b"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        b
+      </span>
+      <span
+        className="facet-stat"
+      >
+        15
+        <div
+          className="projects-facet-bar"
+        >
+          <div
+            className="projects-facet-bar-inner"
+            style={
+              Object {
+                "width": 37.5,
+              }
+            }
+          />
+        </div>
+      </span>
+    </a>
+    <a
+      className="facet search-navigator-facet projects-facet"
+      data-key="c"
+      href="#"
+      key="c"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        c
+      </span>
+      <span
+        className="facet-stat"
+      >
+        24
+        <div
+          className="projects-facet-bar"
+        >
+          <div
+            className="projects-facet-bar-inner"
+            style={
+              Object {
+                "width": 60,
+              }
+            }
+          />
+        </div>
+      </span>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`renders header and footer 1`] = `
+<div
+  className="search-navigator-facet-box"
+  data-key="foo"
+>
+  <header />
+  <div
+    className="search-navigator-facet-list projects-facet-list"
+  >
+    <a
+      className="facet search-navigator-facet projects-facet"
+      data-key={1}
+      href="#"
+      key="1"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        1
+      </span>
+    </a>
+    <a
+      className="facet search-navigator-facet projects-facet"
+      data-key={2}
+      href="#"
+      key="2"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        2
+      </span>
+    </a>
+    <a
+      className="facet search-navigator-facet projects-facet"
+      data-key={3}
+      href="#"
+      key="3"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        3
+      </span>
+    </a>
+  </div>
+  <footer />
+</div>
+`;
+
+exports[`renders multiple selected 1`] = `
+<div
+  className="search-navigator-facet-box"
+  data-key="foo"
+>
+  <div
+    className="search-navigator-facet-list projects-facet-list"
+  >
+    <a
+      className="facet search-navigator-facet projects-facet active"
+      data-key={1}
+      href="#"
+      key="1"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        1
+      </span>
+    </a>
+    <a
+      className="facet search-navigator-facet projects-facet active"
+      data-key={2}
+      href="#"
+      key="2"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        2
+      </span>
+    </a>
+    <a
+      className="facet search-navigator-facet projects-facet"
+      data-key={3}
+      href="#"
+      key="3"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        3
+      </span>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`renders no results 1`] = `
+<div
+  className="search-navigator-facet-box"
+  data-key="foo"
+>
+  <div
+    className="search-navigator-facet-empty"
+  >
+    no_results
+  </div>
+</div>
+`;
+
+exports[`renders selected 1`] = `
+<div
+  className="search-navigator-facet-box"
+  data-key="foo"
+>
+  <div
+    className="search-navigator-facet-list projects-facet-list"
+  >
+    <a
+      className="facet search-navigator-facet projects-facet"
+      data-key={1}
+      href="#"
+      key="1"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        1
+      </span>
+    </a>
+    <a
+      className="facet search-navigator-facet projects-facet active"
+      data-key={2}
+      href="#"
+      key="2"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        2
+      </span>
+    </a>
+    <a
+      className="facet search-navigator-facet projects-facet"
+      data-key={3}
+      href="#"
+      key="3"
+      onClick={[Function]}
+    >
+      <span
+        className="facet-name"
+      >
+        3
+      </span>
+    </a>
+  </div>
+</div>
+`;

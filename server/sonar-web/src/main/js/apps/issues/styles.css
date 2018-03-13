@@ -1,0 +1,193 @@
+/*
+ * SonarQube
+ * Copyright (C) 2009-2018 SonarSource SA
+ * mailto:info AT sonarsource DOT com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+.issues-main-header .component-name {
+  line-height: var(--controlHeight);
+}
+
+.issues-main-header-spinner {
+  margin-right: 2px;
+}
+
+.concise-issues-list-header,
+.concise-issues-list-header-inner {
+}
+
+.concise-issues-list-header {
+}
+
+.concise-issues-list-header-inner {
+  width: 260px;
+  text-align: center;
+}
+
+.concise-issues-list-header .spinner {
+  margin-top: 4px;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.concise-issues-list-header-button {
+  border: none;
+}
+
+.concise-issues-list-header-button path {
+  fill: var(--secondFontColor);
+  transition: fill 0.3s ease;
+}
+
+.concise-issues-list-header-button:hover path {
+  fill: var(--blue);
+}
+
+.concise-issue-component {
+  margin-top: 16px;
+  margin-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.concise-issue-box {
+  position: relative;
+  z-index: var(--belowNormalZIndex);
+  margin-bottom: 4px;
+  padding: 8px;
+  border: 1px solid var(--barBorderColor);
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.concise-issue-box:hover {
+  background-color: #ffeaea;
+}
+
+.concise-issue-box:focus {
+  outline: none;
+}
+
+.concise-issue-box.selected {
+  z-index: var(--normalZIndex);
+  border-color: #dd4040;
+  background-color: #ffeaea;
+  cursor: default;
+}
+
+.concise-issue-box-message {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.concise-issue-box-attributes {
+  margin-top: 8px;
+  line-height: 16px;
+  font-size: var(--smallFontSize);
+}
+
+.concise-issue-box:not(.selected) .location-index {
+  background-color: #ccc;
+}
+
+.concise-issue-locations {
+  margin-right: -4px;
+  margin-bottom: -4px;
+}
+
+.concise-issue-locations .location-index {
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+.consice-issue-locations-navigator-location {
+  display: flex;
+  align-items: flex-start;
+  border: none;
+}
+
+.issues-filters-header {
+  margin-bottom: 12px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid var(--barBorderColor);
+}
+
+.issues-my-issues-filter {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.issues-page-actions {
+  display: inline-block;
+  min-width: 80px;
+  text-align: right;
+}
+
+.issues .search-navigator-facet-footer {
+  padding: 0 0 10px 0;
+}
+
+.issues .issue-list {
+  /* no math, just a good guess */
+  min-width: 640px;
+  width: 800px;
+}
+
+.issues .issue {
+  outline: 1px dashed transparent;
+  cursor: pointer;
+}
+
+.issues .issue:hover {
+  outline-color: #dd4040;
+}
+
+@media (max-width: 1320px) {
+  .issues .issue-list {
+    width: calc(60vw - 40px);
+  }
+}
+
+.issues-workspace-list-component {
+  padding: 10px 10px 6px;
+}
+
+.issues-workspace-list-item + .issues-workspace-list-item {
+  margin-top: 5px;
+}
+
+.issues-workspace-list-component + .issues-workspace-list-item {
+  margin-top: 10px;
+}
+
+.issues-workspace-list-item:first-child .issues-workspace-list-component {
+  padding-top: 0;
+}
+
+.issues-workspace-list-component + .issues-workspace-list-item {
+  margin-top: 0;
+}
+
+.issues-predefined-periods {
+  display: flex;
+}
+
+.issues-predefined-periods .search-navigator-facet {
+  width: auto;
+  margin-right: 4px;
+}

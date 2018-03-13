@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<td
+  className="thin nowrap"
+>
+  <ActionsDropdown
+    className="js-task-action"
+  >
+    <ActionsDropdownItem
+      className="js-task-filter"
+      onClick={[Function]}
+    >
+      background_tasks.filter_by_component_x.foo
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      className="js-task-cancel"
+      destructive={true}
+      onClick={[Function]}
+    >
+      background_tasks.cancel_task
+    </ActionsDropdownItem>
+  </ActionsDropdown>
+</td>
+`;
+
+exports[`renders 2`] = `
+<td
+  className="thin nowrap"
+>
+  <ActionsDropdown
+    className="js-task-action"
+  >
+    <ActionsDropdownItem
+      className="js-task-filter"
+      onClick={[Function]}
+    >
+      background_tasks.filter_by_component_x.foo
+    </ActionsDropdownItem>
+  </ActionsDropdown>
+</td>
+`;
+
+exports[`renders 3`] = `
+<td
+  className="thin nowrap"
+>
+  <ActionsDropdown
+    className="js-task-action"
+  >
+    <ActionsDropdownItem
+      className="js-task-filter"
+      onClick={[Function]}
+    >
+      background_tasks.filter_by_component_x.foo
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      className="js-task-cancel"
+      destructive={true}
+      onClick={[Function]}
+    >
+      background_tasks.cancel_task
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      className="js-task-show-scanner-context"
+      onClick={[Function]}
+    >
+      background_tasks.show_scanner_context
+    </ActionsDropdownItem>
+  </ActionsDropdown>
+</td>
+`;
+
+exports[`renders 4`] = `
+<td
+  className="thin nowrap"
+>
+  <ActionsDropdown
+    className="js-task-action"
+  >
+    <ActionsDropdownItem
+      className="js-task-filter"
+      onClick={[Function]}
+    >
+      background_tasks.filter_by_component_x.foo
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      className="js-task-cancel"
+      destructive={true}
+      onClick={[Function]}
+    >
+      background_tasks.cancel_task
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      className="js-task-show-stacktrace"
+      onClick={[Function]}
+    >
+      background_tasks.show_stacktrace
+    </ActionsDropdownItem>
+  </ActionsDropdown>
+</td>
+`;
+
+exports[`renders 5`] = `
+<td
+  className="thin nowrap"
+>
+  <ActionsDropdown
+    className="js-task-action"
+  >
+    <ActionsDropdownItem
+      className="js-task-cancel"
+      destructive={true}
+      onClick={[Function]}
+    >
+      background_tasks.cancel_task
+    </ActionsDropdownItem>
+  </ActionsDropdown>
+</td>
+`;
+
+exports[`shows scanner context 1`] = `
+<ScannerContext
+  onClose={[Function]}
+  task={
+    Object {
+      "componentName": "foo",
+      "hasScannerContext": true,
+      "id": "123",
+      "status": "PENDING",
+      "submittedAt": "2017-01-01",
+      "type": "REPORT",
+    }
+  }
+/>
+`;
+
+exports[`shows stack trace 1`] = `
+<Stacktrace
+  onClose={[Function]}
+  task={
+    Object {
+      "componentName": "foo",
+      "errorMessage": "error!",
+      "id": "123",
+      "status": "PENDING",
+      "submittedAt": "2017-01-01",
+      "type": "REPORT",
+    }
+  }
+/>
+`;

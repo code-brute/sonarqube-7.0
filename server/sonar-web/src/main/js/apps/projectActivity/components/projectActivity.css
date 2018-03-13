@@ -1,0 +1,298 @@
+/*
+ * SonarQube
+ * Copyright (C) 2009-2018 SonarSource SA
+ * mailto:info AT sonarsource DOT com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+.project-activity-page {
+  min-height: 600px;
+  height: calc(100vh - 250px);
+}
+
+.project-activity-page-side-outer {
+  position: relative;
+  width: 400px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.project-activity-page-side-outer > .boxed-group-inner {
+  padding-left: 12px;
+  padding-right: 15px;
+}
+
+.project-activity-layout-page-main {
+  flex-grow: 1;
+  min-width: 640px;
+  padding-left: 20px;
+  display: flex;
+}
+
+.project-activity-layout-page-main-inner {
+  min-width: 640px;
+  max-width: 880px;
+  margin-bottom: 0px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.project-activity-versions-list {
+  max-width: 400px;
+  box-sizing: border-box;
+  overflow: auto;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.project-activity-graphs {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.project-activity-graph-container {
+  padding: 10px 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.project-activity-graph {
+  flex: 1;
+  overflow: hidden;
+}
+
+.project-activity-graph-legends {
+  flex-grow: 0;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+.project-activity-graph-legend-actionable {
+  display: inline-block;
+  padding: 4px 8px 4px 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 12px;
+}
+
+.project-activity-graph-legend-actionable:not(.alert-warning) {
+  border-color: var(--barBorderColor);
+}
+
+.project-activity-graph-tooltip {
+  padding: 8px;
+}
+
+.project-activity-graph-tooltip-line {
+  height: 20px;
+}
+
+.project-activity-graph-tooltip-line + .project-activity-graph-tooltip-line {
+  padding-top: 4px;
+}
+
+.project-activity-graph-tooltip-line .project-activity-event-icon {
+  margin-top: 1px;
+}
+
+.project-activity-graph-tooltip-issues-line {
+  height: 26px;
+  padding-bottom: 4px;
+}
+
+.project-activity-graph-tooltip-separator {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.project-activity-graph-tooltip-separator hr {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.project-activity-graph-tooltip-title,
+.project-activity-graph-tooltip-value {
+  font-weight: bold;
+}
+
+.project-activity-days-list {
+}
+
+.project-activity-day {
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.project-activity-day:last-child {
+  margin-bottom: 10px;
+}
+
+.project-activity-date {
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.project-activity-analyses-list {
+}
+
+.project-activity-analysis {
+  position: relative;
+  min-height: 20px;
+  padding: 4px;
+  border-top: 1px solid var(--barBorderColor);
+  border-bottom: 1px solid var(--barBorderColor);
+  cursor: pointer;
+}
+
+.project-activity-analysis.selected {
+  background-color: #ecf6fe;
+}
+
+.project-activity-analysis:focus {
+  outline: none;
+}
+
+.project-activity-analysis:hover {
+  background-color: #ecf6fe;
+}
+
+.project-activity-analysis + .project-activity-analysis {
+  border-top: none;
+}
+
+.project-activity-analysis-actions {
+  float: left;
+}
+
+.project-activity-time {
+  float: left;
+  width: 54px;
+  line-height: 20px;
+  box-sizing: border-box;
+  font-size: var(--smallFontSize);
+  font-weight: bold;
+  text-align: right;
+}
+
+.project-activity-analysis-icon {
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  border: 2px solid var(--blue);
+  border-radius: 10px;
+  box-sizing: border-box;
+  content: '';
+}
+
+.project-activity-events {
+  overflow: hidden;
+}
+
+.project-activity-event {
+  line-height: 18px;
+  display: flex;
+}
+
+.project-activity-event + .project-activity-event {
+  margin-top: 4px;
+}
+
+.project-activity-event-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.project-activity-event-inner-icon {
+  flex-shrink: 0;
+}
+
+.project-activity-event-inner-text {
+  flex: 1;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-activity-event-actions {
+  display: inline-block;
+}
+
+.project-activity-event-inner-icon .project-activity-event-icon {
+  margin-top: 3px;
+}
+
+.project-activity-event-icon.VERSION {
+  color: var(--blue);
+}
+
+.project-activity-event-icon.QUALITY_GATE {
+  color: var(--purple);
+}
+
+.project-activity-event-icon.QUALITY_PROFILE {
+  color: #cccccc;
+}
+
+.project-activity-event-icon.OTHER {
+  color: #442d1b;
+}
+
+.project-activity-version-badge {
+  margin-left: -12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: white;
+}
+
+.project-activity-version-badge.sticky,
+.project-activity-version-badge.first {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  right: 16px;
+  padding-top: 24px;
+  z-index: var(--belowNormalZIndex);
+}
+
+.project-activity-version-badge.sticky + .project-activity-days-list {
+  padding-top: 36px;
+}
+
+.project-activity-version-badge .badge {
+  max-width: 385px;
+  vertical-align: middle;
+  padding: 4px 14px 4px 14px;
+  box-sizing: border-box;
+  border-radius: 0 2px 2px 0;
+  font-weight: bold;
+  font-size: var(--smallFontSize);
+  letter-spacing: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

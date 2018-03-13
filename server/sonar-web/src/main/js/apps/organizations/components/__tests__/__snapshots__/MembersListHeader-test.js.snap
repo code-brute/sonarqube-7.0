@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render with the total 1`] = `
+<div
+  className="panel panel-vertical bordered-bottom spacer-bottom"
+>
+  <SearchBox
+    minLength={2}
+    onChange={[MockFunction]}
+    placeholder="search.search_for_users"
+  />
+  <span
+    className="pull-right little-spacer-top"
+  >
+    <strong>
+      8
+    </strong>
+     
+    organization.members.members
+  </span>
+</div>
+`;
+
+exports[`should render without the total 1`] = `
+<div
+  className="panel panel-vertical bordered-bottom spacer-bottom"
+>
+  <SearchBox
+    minLength={2}
+    onChange={[MockFunction]}
+    placeholder="search.search_for_users"
+  />
+</div>
+`;

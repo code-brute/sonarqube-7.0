@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders sorted list of branches 1`] = `
+<div
+  className="page page-limited"
+>
+  <header
+    className="page-header"
+  >
+    <h1
+      className="page-title"
+    >
+      project_branches.page
+    </h1>
+    <LongBranchesPattern
+      project="foo"
+    />
+    <p
+      className="page-description"
+    >
+      project_branches.page.description
+    </p>
+    <p
+      className="page-description"
+    >
+      <FormattedMessage
+        defaultMessage="project_branches.page.life_time"
+        id="project_branches.page.life_time"
+        values={
+          Object {
+            "days": "100",
+            "settings": <Link
+              onlyActiveOnIndex={false}
+              style={Object {}}
+              to="/admin/settings"
+            >
+              settings.page
+            </Link>,
+          }
+        }
+      />
+    </p>
+  </header>
+  <div
+    className="boxed-group boxed-group-inner"
+  >
+    <table
+      className="data zebra zebra-hover"
+    >
+      <thead>
+        <tr>
+          <th>
+            branch
+          </th>
+          <th
+            className="thin nowrap text-right"
+          >
+            status
+          </th>
+          <th
+            className="thin nowrap text-right"
+          >
+            branches.last_analysis_date
+          </th>
+          <th
+            className="thin nowrap text-right"
+          >
+            actions
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <BranchRow
+          branch={
+            Object {
+              "isMain": true,
+              "name": "master",
+            }
+          }
+          component="foo"
+          key="master"
+          onChange={[MockFunction]}
+        />
+        <BranchRow
+          branch={
+            Object {
+              "isMain": false,
+              "mergeBranch": "master",
+              "name": "branch-1.0",
+              "type": "SHORT",
+            }
+          }
+          component="foo"
+          key="branch-1.0"
+          onChange={[MockFunction]}
+        />
+        <BranchRow
+          branch={
+            Object {
+              "isMain": false,
+              "name": "branch-1.0",
+              "type": "LONG",
+            }
+          }
+          component="foo"
+          key="branch-1.0"
+          onChange={[MockFunction]}
+        />
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

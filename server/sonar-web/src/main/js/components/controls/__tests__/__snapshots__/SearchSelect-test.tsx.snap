@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Select 1`] = `
+<Select
+  autofocus={true}
+  className="input-super-large"
+  clearable={false}
+  filterOption={[Function]}
+  isLoading={false}
+  noResultsText="select2.tooShort.2"
+  onBlurResetsInput={true}
+  onChange={[Function]}
+  onInputChange={[Function]}
+  options={Array []}
+  placeholder="search_verb"
+  searchable={true}
+/>
+`;

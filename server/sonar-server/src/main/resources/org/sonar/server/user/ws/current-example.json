@@ -1,0 +1,20 @@
+{
+  "isLoggedIn": true,
+  "login": "obiwan.kenobi",
+  "name": "Obiwan Kenobi",
+  "email": "obiwan.kenobi@starwars.com",
+  "avatar": "f5aa64437a1821ffe8b563099d506aef",
+  "local": true,
+  "externalIdentity": "obiwan.kenobi",
+  "externalProvider": "sonarqube",
+  "showOnboardingTutorial": false,
+  "scmAccounts": ["obiwan:github", "obiwan:bitbucket"],
+  "groups": ["Jedi", "Rebel"],
+  "permissions": {
+    "global": ["profileadmin", "scan"]
+  },
+  "homepage": {
+    "type": "PROJECT",
+    "parameter": "death-star-key"
+  }
+}

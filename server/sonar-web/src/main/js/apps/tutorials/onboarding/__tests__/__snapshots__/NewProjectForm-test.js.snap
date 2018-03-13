@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates new project 1`] = `
+<NewProjectForm
+  onDelete={[MockFunction]}
+  onDone={[MockFunction]}
+>
+  <div
+    className="big-spacer-top"
+  >
+    <h4
+      className="spacer-bottom"
+    >
+      onboarding.language.project_key
+    </h4>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        autoFocus={true}
+        className="input-large spacer-right text-middle"
+        maxLength={400}
+        minLength={1}
+        onChange={[Function]}
+        required={true}
+        type="text"
+        value=""
+      />
+      <button
+        className="text-middle"
+        disabled={true}
+      >
+        Done
+      </button>
+      <div
+        className="note spacer-top abs-width-300"
+      >
+        onboarding.project_key_requirement
+      </div>
+    </form>
+  </div>
+</NewProjectForm>
+`;
+
+exports[`creates new project 2`] = `
+<NewProjectForm
+  onDelete={[MockFunction]}
+  onDone={[MockFunction]}
+>
+  <div
+    className="big-spacer-top"
+  >
+    <h4
+      className="spacer-bottom"
+    >
+      onboarding.language.project_key
+    </h4>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        autoFocus={true}
+        className="input-large spacer-right text-middle"
+        maxLength={400}
+        minLength={1}
+        onChange={[Function]}
+        required={true}
+        type="text"
+        value="foo"
+      />
+      <i
+        className="spinner text-middle"
+      />
+      <div
+        className="note spacer-top abs-width-300"
+      >
+        onboarding.project_key_requirement
+      </div>
+    </form>
+  </div>
+</NewProjectForm>
+`;
+
+exports[`creates new project 3`] = `
+<NewProjectForm
+  onDelete={[MockFunction]}
+  onDone={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "foo",
+        ],
+      ],
+    }
+  }
+>
+  <div
+    className="big-spacer-top"
+  >
+    <h4
+      className="spacer-bottom"
+    >
+      onboarding.language.project_key
+    </h4>
+    <div>
+      <span
+        className="spacer-right text-middle"
+      >
+        foo
+      </span>
+      <DeleteButton
+        className="button-small text-middle"
+        onClick={[Function]}
+      >
+        <ButtonIcon
+          className="button-small text-middle"
+          color="#d4333f"
+          onClick={[Function]}
+        >
+          <button
+            className="button-small text-middle button-icon"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#d4333f",
+              }
+            }
+          >
+            <ClearIcon />
+          </button>
+        </ButtonIcon>
+      </DeleteButton>
+    </div>
+  </div>
+</NewProjectForm>
+`;
+
+exports[`deletes project 1`] = `
+<NewProjectForm
+  onDelete={[MockFunction]}
+  onDone={[MockFunction]}
+>
+  <div
+    className="big-spacer-top"
+  >
+    <h4
+      className="spacer-bottom"
+    >
+      onboarding.language.project_key
+    </h4>
+    <div>
+      <span
+        className="spacer-right text-middle"
+      >
+        foo
+      </span>
+      <DeleteButton
+        className="button-small text-middle"
+        onClick={[Function]}
+      >
+        <ButtonIcon
+          className="button-small text-middle"
+          color="#d4333f"
+          onClick={[Function]}
+        >
+          <button
+            className="button-small text-middle button-icon"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#d4333f",
+              }
+            }
+          >
+            <ClearIcon />
+          </button>
+        </ButtonIcon>
+      </DeleteButton>
+    </div>
+  </div>
+</NewProjectForm>
+`;
+
+exports[`deletes project 2`] = `
+<NewProjectForm
+  onDelete={[MockFunction]}
+  onDone={[MockFunction]}
+>
+  <div
+    className="big-spacer-top"
+  >
+    <h4
+      className="spacer-bottom"
+    >
+      onboarding.language.project_key
+    </h4>
+    <div>
+      <span
+        className="spacer-right text-middle"
+      >
+        foo
+      </span>
+      <i
+        className="spinner text-middle"
+      />
+    </div>
+  </div>
+</NewProjectForm>
+`;
+
+exports[`deletes project 3`] = `
+<NewProjectForm
+  onDelete={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+    }
+  }
+  onDone={[MockFunction]}
+>
+  <div
+    className="big-spacer-top"
+  >
+    <h4
+      className="spacer-bottom"
+    >
+      onboarding.language.project_key
+    </h4>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        autoFocus={true}
+        className="input-large spacer-right text-middle"
+        maxLength={400}
+        minLength={1}
+        onChange={[Function]}
+        required={true}
+        type="text"
+        value=""
+      />
+      <button
+        className="text-middle"
+        disabled={true}
+      >
+        Done
+      </button>
+      <div
+        className="note spacer-top abs-width-300"
+      >
+        onboarding.project_key_requirement
+      </div>
+    </form>
+  </div>
+</NewProjectForm>
+`;

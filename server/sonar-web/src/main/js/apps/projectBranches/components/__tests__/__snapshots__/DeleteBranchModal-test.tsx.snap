@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<Modal
+  contentLabel="branches.delete"
+  onRequestClose={[MockFunction]}
+>
+  <header
+    className="modal-head"
+  >
+    <h2>
+      branches.delete
+    </h2>
+  </header>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="modal-body"
+    >
+      branches.delete.are_you_sure.feature
+    </div>
+    <footer
+      className="modal-foot"
+    >
+      <button
+        className="button-red"
+        disabled={false}
+        type="submit"
+      >
+        delete
+      </button>
+      <a
+        href="#"
+        onClick={[Function]}
+      >
+        cancel
+      </a>
+    </footer>
+  </form>
+</Modal>
+`;
+
+exports[`renders 2`] = `
+<Modal
+  contentLabel="branches.delete"
+  onRequestClose={[MockFunction]}
+>
+  <header
+    className="modal-head"
+  >
+    <h2>
+      branches.delete
+    </h2>
+  </header>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="modal-body"
+    >
+      branches.delete.are_you_sure.feature
+    </div>
+    <footer
+      className="modal-foot"
+    >
+      <i
+        className="spinner spacer-right"
+      />
+      <button
+        className="button-red"
+        disabled={true}
+        type="submit"
+      >
+        delete
+      </button>
+      <a
+        href="#"
+        onClick={[Function]}
+      >
+        cancel
+      </a>
+    </footer>
+  </form>
+</Modal>
+`;

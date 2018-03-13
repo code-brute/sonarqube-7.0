@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display correctly 1`] = `
+<Modal
+  contentLabel="system.system_upgrade"
+  onRequestClose={[MockFunction]}
+>
+  <div
+    className="modal-head"
+  >
+    <h2>
+      system.system_upgrade
+    </h2>
+  </div>
+  <div
+    className="modal-body"
+  >
+    <SystemUpgradeItem
+      key="6.3"
+      systemUpgrades={
+        Array [
+          Object {
+            "changeLogUrl": "changelogurl",
+            "description": "Version 6.4 description",
+            "downloadUrl": "downloadurl",
+            "plugins": Object {},
+            "releaseDate": "2017-06-02",
+            "version": "6.4",
+          },
+          Object {
+            "changeLogUrl": "changelogurl",
+            "description": "Version 6.3 description",
+            "downloadUrl": "downloadurl",
+            "plugins": Object {},
+            "releaseDate": "2017-05-02",
+            "version": "6.3",
+          },
+        ]
+      }
+      type="system.latest_version"
+    />
+    <SystemUpgradeItem
+      key="5.6.5"
+      systemUpgrades={
+        Array [
+          Object {
+            "changeLogUrl": "changelogurl",
+            "description": "Version 5.6.7 description",
+            "downloadUrl": "downloadurl",
+            "plugins": Object {},
+            "releaseDate": "2017-03-01",
+            "version": "5.6.7",
+          },
+          Object {
+            "changeLogUrl": "changelogurl",
+            "description": "Version 5.6.6 description",
+            "downloadUrl": "downloadurl",
+            "plugins": Object {},
+            "releaseDate": "2017-04-02",
+            "version": "5.6.6",
+          },
+          Object {
+            "changeLogUrl": "changelogurl",
+            "description": "Version 5.6.5 description",
+            "downloadUrl": "downloadurl",
+            "plugins": Object {},
+            "releaseDate": "2017-03-01",
+            "version": "5.6.5",
+          },
+        ]
+      }
+      type="system.lts_version"
+    />
+  </div>
+  <div
+    className="modal-foot"
+  >
+    <a
+      className="pull-left"
+      href="https://www.sonarqube.org/downloads/"
+      target="_blank"
+    >
+      system.see_sonarqube_downloads
+    </a>
+    <a
+      href="#"
+      onClick={[Function]}
+    >
+      cancel
+    </a>
+  </div>
+</Modal>
+`;

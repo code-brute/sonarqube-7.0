@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render tags popup correctly 1`] = `
+<BubblePopup
+  customClass="bubble-popup-menu bubble-popup-bottom"
+>
+  <SelectList
+    currentItem="confirm"
+    items={
+      Array [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix",
+      ]
+    }
+    onSelect={[MockFunction]}
+  >
+    <SelectListItem
+      item="confirm"
+      key="confirm"
+      title="issue.transition.confirm.description"
+    >
+      issue.transition.confirm
+    </SelectListItem>
+    <SelectListItem
+      item="resolve"
+      key="resolve"
+      title="issue.transition.resolve.description"
+    >
+      issue.transition.resolve
+    </SelectListItem>
+    <SelectListItem
+      item="falsepositive"
+      key="falsepositive"
+      title="issue.transition.falsepositive.description"
+    >
+      issue.transition.falsepositive
+    </SelectListItem>
+    <SelectListItem
+      item="wontfix"
+      key="wontfix"
+      title="issue.transition.wontfix.description"
+    >
+      issue.transition.wontfix
+    </SelectListItem>
+  </SelectList>
+</BubblePopup>
+`;

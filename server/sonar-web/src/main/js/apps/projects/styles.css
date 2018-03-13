@@ -1,0 +1,293 @@
+/*
+ * SonarQube
+ * Copyright (C) 2009-2018 SonarSource SA
+ * mailto:info AT sonarsource DOT com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+.projects-topbar-items {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.projects-topbar-item + .projects-topbar-item {
+  padding-left: 24px;
+}
+
+.projects-topbar-item .spinner {
+  top: -1px;
+}
+
+.projects-topbar-item.is-last {
+  margin-left: auto;
+  padding-left: 32px;
+}
+
+.projects-topbar-item.is-loading {
+  padding-left: 0;
+}
+
+.projects-topbar-item.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.projects-topbar-item.disabled * {
+  pointer-events: none !important;
+}
+
+.projects-topbar-item-search {
+  position: relative;
+  flex: 1;
+  height: var(--controlHeight);
+}
+
+.projects-list .page-actions {
+  margin-bottom: 0;
+}
+
+.project-card {
+  position: relative;
+  min-height: 114px;
+  box-sizing: border-box;
+}
+
+.project-card-name {
+  font-weight: 600;
+}
+
+.project-card-dates {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.project-card-leak-date {
+  padding: 4px 8px;
+  margin: -5px -4px -5px 24px;
+  background-color: var(--leakColor);
+  border: 1px solid var(--leakBorderColor);
+}
+
+.project-card-measures {
+  display: flex;
+  padding-top: 8px;
+  margin: 0 -15px;
+}
+
+.project-card-leak-measures {
+  display: flex;
+  padding: 8px 0;
+  margin: 4px -4px;
+  background-color: var(--leakColor);
+  border: 1px solid var(--leakBorderColor);
+}
+
+.projects-leak-sorting-option {
+  background-color: var(--leakColor);
+  margin-bottom: 2px;
+}
+
+.projects-leak-sorting-option.is-focused {
+  background-color: var(--leakBorderColor);
+}
+
+.project-card-measure {
+  width: 130px;
+}
+
+.project-card-measure.smaller-card {
+  width: 90px;
+}
+
+.project-card-measure {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.project-card-measure + .project-card-measure:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: var(--controlHeight);
+  margin-top: -12px;
+  border-left: 1px solid var(--barBorderColor);
+  content: '';
+}
+
+.project-card-measure .level {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.project-card-measure-inner {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.project-card-measure-number {
+  line-height: 25px;
+  font-size: 18px;
+}
+
+.project-card-measure-label {
+  margin-top: 4px;
+  font-size: var(--smallFontSize);
+}
+
+.project-card-measure-label-with-icon {
+  margin-top: 2px;
+  font-size: var(--smallFontSize);
+  white-space: nowrap;
+}
+
+.project-card-ncloc {
+  margin-left: auto;
+  text-align: right;
+}
+
+.project-card-ncloc:before {
+  display: none;
+}
+
+.project-card-ncloc .project-card-measure-inner {
+  text-align: right;
+}
+
+.project-card-languages {
+  display: inline-block;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-card-quality-gate {
+  line-height: var(--controlHeight);
+}
+
+.project-card-not-analyzed {
+  padding: 14px 0;
+}
+
+.projects-facet-header {
+  padding: 10px;
+  transition: none;
+}
+
+.projects-facet-list {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.projects-facets-header {
+  margin-bottom: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--barBorderColor);
+}
+
+.projects-facets-reset {
+  float: right;
+}
+
+.projects-facets-reset .button {
+}
+
+.projects-facet-bar {
+  display: inline-block;
+  width: 60px;
+  margin-left: 8px;
+}
+
+.projects-facet-bar-inner {
+  min-width: 1px;
+  height: 10px;
+  background-color: var(--gray71);
+  transition: width 0.3s ease;
+}
+
+.search-navigator-facet.active .projects-facet-bar-inner,
+.search-navigator-facet-highlight-under-container
+  .search-navigator-facet.active
+  ~ .search-navigator-facet
+  .projects-facet-bar-inner {
+  background-color: var(--blue);
+}
+
+.projects-visualization {
+  position: relative;
+  height: 600px;
+}
+
+.projects-visualization .measure-details-bubble-chart-axis.y {
+  width: 300px;
+  left: 15px;
+  margin-top: 150px;
+  transform-origin: 0 0;
+  text-align: center;
+}
+
+.projects-visualizations-footer {
+  margin-top: 8px;
+  padding: 15px 60px;
+  border-top: 1px solid var(--barBorderColor);
+  font-size: var(--smallFontSize);
+  line-height: 1.4;
+  text-align: center;
+}
+
+.projects-visualizations-footer .note {
+  font-style: italic;
+}
+
+.measure-details-bubble-chart-axis {
+  position: absolute;
+  color: var(--secondFontColor);
+  font-size: var(--smallFontSize);
+}
+
+.measure-details-bubble-chart-axis.x {
+  left: 50%;
+  bottom: 10px;
+  width: 500px;
+  margin-left: -250px;
+  text-align: center;
+}
+
+.measure-details-bubble-chart-axis.y {
+  top: 50%;
+  left: -20px;
+  transform: rotate(-90deg);
+}
+
+.measure-details-bubble-chart-axis.size {
+  left: 50%;
+  top: 10px;
+  width: 500px;
+  margin-left: -250px;
+  text-align: center;
+}
+
+.projects-empty-list {
+  padding: calc(4 * var(--gridSize)) 0;
+  text-align: center;
+}

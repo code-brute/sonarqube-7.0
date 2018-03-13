@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render \`leak\` view correctly 1`] = `
+<div>
+  <Connect(FavoriteFilter)
+    query={
+      Object {
+        "view": "leak",
+      }
+    }
+  />
+  <div
+    className="projects-facets-header clearfix"
+  >
+    <h3>
+      filters
+    </h3>
+  </div>
+  <QualityGateFilter
+    onQueryChange={[MockFunction]}
+    query={
+      Object {
+        "view": "leak",
+      }
+    }
+  />
+  <React.Fragment>
+    <NewReliabilityFilter
+      onQueryChange={[MockFunction]}
+      query={
+        Object {
+          "view": "leak",
+        }
+      }
+    />
+    <NewSecurityFilter
+      onQueryChange={[MockFunction]}
+      query={
+        Object {
+          "view": "leak",
+        }
+      }
+    />
+    <NewMaintainabilityFilter
+      onQueryChange={[MockFunction]}
+      query={
+        Object {
+          "view": "leak",
+        }
+      }
+    />
+    <NewCoverageFilter
+      onQueryChange={[MockFunction]}
+      query={
+        Object {
+          "view": "leak",
+        }
+      }
+    />
+    <NewDuplicationsFilter
+      onQueryChange={[MockFunction]}
+      query={
+        Object {
+          "view": "leak",
+        }
+      }
+    />
+    <NewLinesFilter
+      onQueryChange={[MockFunction]}
+      query={
+        Object {
+          "view": "leak",
+        }
+      }
+    />
+  </React.Fragment>
+  <Connect(LanguagesFilter)
+    onQueryChange={[MockFunction]}
+    query={
+      Object {
+        "view": "leak",
+      }
+    }
+  />
+  <TagsFilter
+    onQueryChange={[MockFunction]}
+    query={
+      Object {
+        "view": "leak",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`should render correctly 1`] = `
+<div>
+  <Connect(FavoriteFilter) />
+  <div
+    className="projects-facets-header clearfix"
+  >
+    <ClearAll
+      onClearAll={[MockFunction]}
+    />
+    <h3>
+      filters
+    </h3>
+  </div>
+  <QualityGateFilter
+    onQueryChange={[MockFunction]}
+    query={
+      Object {
+        "size": "3",
+      }
+    }
+  />
+  <React.Fragment>
+    <ReliabilityFilter
+      onQueryChange={[MockFunction]}
+      query={
+        Object {
+          "size": "3",
+        }
+      }
+    />
+    <SecurityFilter
+      onQueryChange={[MockFunction]}
+      query={
+        Object {
+          "size": "3",
+        }
+      }
+    />
+    <MaintainabilityFilter
+      onQueryChange={[MockFunction]}
+      query={
+        Object {
+          "size": "3",
+        }
+      }
+    />
+    <CoverageFilter
+      onQueryChange={[MockFunction]}
+      query={
+        Object {
+          "size": "3",
+        }
+      }
+    />
+    <DuplicationsFilter
+      onQueryChange={[MockFunction]}
+      query={
+        Object {
+          "size": "3",
+        }
+      }
+    />
+    <SizeFilter
+      onQueryChange={[MockFunction]}
+      query={
+        Object {
+          "size": "3",
+        }
+      }
+      value="3"
+    />
+  </React.Fragment>
+  <Connect(LanguagesFilter)
+    onQueryChange={[MockFunction]}
+    query={
+      Object {
+        "size": "3",
+      }
+    }
+  />
+  <TagsFilter
+    onQueryChange={[MockFunction]}
+    query={
+      Object {
+        "size": "3",
+      }
+    }
+  />
+</div>
+`;

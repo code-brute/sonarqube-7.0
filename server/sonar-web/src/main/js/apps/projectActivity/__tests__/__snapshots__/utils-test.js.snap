@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generateCoveredLinesMetric should correctly generate covered lines metric 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "x": 2017-04-27T08:21:32.000Z,
+      "y": 88,
+    },
+    Object {
+      "x": 2017-04-30T23:06:24.000Z,
+      "y": 50,
+    },
+  ],
+  "name": "covered_lines",
+  "translatedName": "project_activity.custom_metric.covered_lines",
+  "type": "INT",
+}
+`;
+
+exports[`generateSeries should correctly generate the series 1`] = `
+Array [
+  Object {
+    "data": Array [
+      Object {
+        "x": 2017-04-27T08:21:32.000Z,
+        "y": 88,
+      },
+      Object {
+        "x": 2017-04-30T23:06:24.000Z,
+        "y": 50,
+      },
+    ],
+    "name": "covered_lines",
+    "translatedName": "project_activity.custom_metric.covered_lines",
+    "type": "INT",
+  },
+  Object {
+    "data": Array [
+      Object {
+        "x": 2017-04-27T08:21:32.000Z,
+        "y": 100,
+      },
+      Object {
+        "x": 2017-04-30T23:06:24.000Z,
+        "y": 100,
+      },
+    ],
+    "name": "lines_to_cover",
+    "translatedName": "Line to Cover",
+    "type": "PERCENT",
+  },
+]
+`;
+
+exports[`getAnalysesByVersionByDay should also filter analysis based on the query 1`] = `
+Array [
+  Object {
+    "byDay": Object {
+      "1495065600000": Array [
+        Object {
+          "date": 2017-05-18T14:13:07.000Z,
+          "events": Array [
+            Object {
+              "category": "QUALITY_PROFILE",
+              "key": "AVxZtC-N7841nF4RNEMJ",
+              "name": "Changes in \\"Default - SonarSource conventions\\" (Java)",
+            },
+          ],
+          "key": "AVxZtCpH7841nF4RNEMI",
+        },
+      ],
+    },
+    "key": "AVyM9oI1HjR_PLDzRciU",
+    "version": "1.1",
+  },
+  Object {
+    "byDay": Object {
+      "1494892800000": Array [
+        Object {
+          "date": 2017-05-16T07:09:59.000Z,
+          "events": Array [
+            Object {
+              "category": "VERSION",
+              "key": "AVyM9oI1HjR_PLDzRciU",
+              "name": "1.0",
+            },
+            Object {
+              "category": "QUALITY_PROFILE",
+              "key": "AVwQF7zXl-nNFgFWOJ3W",
+              "name": "Changes in \\"Default - SonarSource conventions\\" (Java)",
+            },
+          ],
+          "key": "AVwQF7kwl-nNFgFWOJ3V",
+        },
+      ],
+    },
+    "key": "AVyM9oI1HjR_PLDzRciU",
+    "version": "1.0",
+  },
+]
+`;
+
+exports[`getAnalysesByVersionByDay should also filter analysis based on the query 2`] = `
+Array [
+  Object {
+    "byDay": Object {
+      "1496966400000": Array [
+        Object {
+          "date": 2017-06-09T11:12:27.000Z,
+          "events": Array [],
+          "key": "AVyM9n3cHjR_PLDzRciT",
+        },
+      ],
+    },
+    "key": "AVyM9oI1HjR_PLDzRciU",
+    "version": "1.1-SNAPSHOT",
+  },
+  Object {
+    "byDay": Object {
+      "1495065600000": Array [
+        Object {
+          "date": 2017-05-18T14:13:07.000Z,
+          "events": Array [
+            Object {
+              "category": "QUALITY_PROFILE",
+              "key": "AVxZtC-N7841nF4RNEMJ",
+              "name": "Changes in \\"Default - SonarSource conventions\\" (Java)",
+            },
+          ],
+          "key": "AVxZtCpH7841nF4RNEMI",
+        },
+      ],
+      "1496966400000": Array [
+        Object {
+          "date": 2017-06-09T11:12:27.000Z,
+          "events": Array [
+            Object {
+              "category": "VERSION",
+              "key": "AVyM9oI1HjR_PLDzRciU",
+              "name": "1.1",
+            },
+          ],
+          "key": "AVyMjlK1HjR_PLDzRbB9",
+        },
+      ],
+    },
+    "key": "AVyM9oI1HjR_PLDzRciU",
+    "version": "1.1",
+  },
+  Object {
+    "byDay": Object {},
+    "key": "AVyM9oI1HjR_PLDzRciU",
+    "version": "1.0",
+  },
+]
+`;
+
+exports[`getAnalysesByVersionByDay should correctly map analysis by versions and by days 1`] = `
+Array [
+  Object {
+    "byDay": Object {
+      "1496966400000": Array [
+        Object {
+          "date": 2017-06-09T13:06:10.000Z,
+          "events": Array [
+            Object {
+              "category": "VERSION",
+              "key": "AVyM9oI1HjR_PLDzRciU",
+              "name": "1.1-SNAPSHOT",
+            },
+          ],
+          "key": "AVyMjlK1HjR_PLDzRbB9",
+        },
+        Object {
+          "date": 2017-06-09T11:12:27.000Z,
+          "events": Array [],
+          "key": "AVyM9n3cHjR_PLDzRciT",
+        },
+      ],
+    },
+    "key": "AVyM9oI1HjR_PLDzRciU",
+    "version": "1.1-SNAPSHOT",
+  },
+  Object {
+    "byDay": Object {
+      "1495065600000": Array [
+        Object {
+          "date": 2017-05-18T14:13:07.000Z,
+          "events": Array [
+            Object {
+              "category": "QUALITY_PROFILE",
+              "key": "AVxZtC-N7841nF4RNEMJ",
+              "name": "Changes in \\"Default - SonarSource conventions\\" (Java)",
+            },
+          ],
+          "key": "AVxZtCpH7841nF4RNEMI",
+        },
+        Object {
+          "date": 2017-05-18T07:17:32.000Z,
+          "events": Array [],
+          "key": "AVwaa1qkpbBde8B6UhYI",
+        },
+      ],
+      "1496966400000": Array [
+        Object {
+          "date": 2017-06-09T11:12:27.000Z,
+          "events": Array [
+            Object {
+              "category": "VERSION",
+              "key": "AVyM9oI1HjR_PLDzRciU",
+              "name": "1.1",
+            },
+          ],
+          "key": "AVyMjlK1HjR_PLDzRbB9",
+        },
+      ],
+    },
+    "key": "AVyM9oI1HjR_PLDzRciU",
+    "version": "1.1",
+  },
+  Object {
+    "byDay": Object {
+      "1494288000000": Array [
+        Object {
+          "date": 2017-05-09T12:03:59.000Z,
+          "events": Array [],
+          "key": "AVvtGF3IY6vCuQNDdwxI",
+        },
+      ],
+      "1494892800000": Array [
+        Object {
+          "date": 2017-05-16T07:09:59.000Z,
+          "events": Array [
+            Object {
+              "category": "VERSION",
+              "key": "AVyM9oI1HjR_PLDzRciU",
+              "name": "1.0",
+            },
+            Object {
+              "category": "QUALITY_PROFILE",
+              "key": "AVwQF7zXl-nNFgFWOJ3W",
+              "name": "Changes in \\"Default - SonarSource conventions\\" (Java)",
+            },
+          ],
+          "key": "AVwQF7kwl-nNFgFWOJ3V",
+        },
+      ],
+    },
+    "key": "AVyM9oI1HjR_PLDzRciU",
+    "version": "1.0",
+  },
+]
+`;
+
+exports[`getAnalysesByVersionByDay should create fake version 1`] = `
+Array [
+  Object {
+    "byDay": Object {
+      "1495065600000": Array [
+        Object {
+          "date": 2017-05-18T14:13:07.000Z,
+          "events": Array [],
+          "key": "AVxZtCpH7841nF4RNEMI",
+        },
+      ],
+      "1496966400000": Array [
+        Object {
+          "date": 2017-06-09T13:06:10.000Z,
+          "events": Array [],
+          "key": "AVyMjlK1HjR_PLDzRbB9",
+        },
+        Object {
+          "date": 2017-06-09T11:12:27.000Z,
+          "events": Array [],
+          "key": "AVyM9n3cHjR_PLDzRciT",
+        },
+        Object {
+          "date": 2017-06-09T11:12:27.000Z,
+          "events": Array [],
+          "key": "AVyMjlK1HjR_PLDzRbB9",
+        },
+      ],
+    },
+    "key": null,
+    "version": null,
+  },
+]
+`;

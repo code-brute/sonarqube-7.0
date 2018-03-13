@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display the log level alert 1`] = `
+<span
+  className="alert alert-danger spacer-left"
+>
+  system.log_level.warning.short
+</span>
+`;
+
+exports[`should display the sysinfo detail 1`] = `
+<li
+  className="boxed-group system-info-health-card"
+>
+  <div
+    className="boxed-group-header"
+    onClick={[Function]}
+  >
+    <span
+      className="system-info-health-card-title"
+    >
+      <OpenCloseIcon
+        className="little-spacer-right"
+        open={true}
+      />
+      Foobar
+    </span>
+    <HealthItem
+      biggerHealth={true}
+      className="pull-right"
+      health="RED"
+      healthCauses={
+        Array [
+          "foo",
+        ]
+      }
+      name="Foobar"
+    />
+  </div>
+  <div
+    className="boxed-group-inner"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  />
+</li>
+`;
+
+exports[`should render correctly 1`] = `
+<li
+  className="boxed-group system-info-health-card"
+>
+  <div
+    className="boxed-group-header"
+    onClick={[Function]}
+  >
+    <span
+      className="system-info-health-card-title"
+    >
+      <OpenCloseIcon
+        className="little-spacer-right"
+        open={false}
+      />
+      Foobar
+    </span>
+    <HealthItem
+      biggerHealth={false}
+      className="pull-right"
+      health="RED"
+      healthCauses={
+        Array [
+          "foo",
+        ]
+      }
+      name="Foobar"
+    />
+  </div>
+</li>
+`;
+
+exports[`should show a main section and multiple sub sections 1`] = `
+<li
+  className="boxed-group system-info-health-card"
+>
+  <div
+    className="boxed-group-header"
+    onClick={[Function]}
+  >
+    <span
+      className="system-info-health-card-title"
+    >
+      <OpenCloseIcon
+        className="little-spacer-right"
+        open={true}
+      />
+      Foobar
+    </span>
+    <HealthItem
+      biggerHealth={false}
+      className="pull-right"
+      health="RED"
+      healthCauses={
+        Array [
+          "foo",
+        ]
+      }
+      name="Foobar"
+    />
+  </div>
+  <div
+    className="boxed-group-inner"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <Section
+      items={
+        Object {
+          "Name": "foo",
+          "bar": "Bar",
+        }
+      }
+    />
+    <Section
+      items={
+        Object {
+          "db": "test",
+        }
+      }
+      key="Database"
+      name="Database"
+    />
+    <Section
+      items={
+        Object {
+          "Elastic": "search",
+        }
+      }
+      key="Elasticseach"
+      name="Elasticseach"
+    />
+  </div>
+</li>
+`;

@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should handle the descending sort direction 1`] = `
+<div>
+  <label>
+    projects.sort_by
+    :
+  </label>
+  <Select
+    className="little-spacer-left input-medium"
+    clearable={false}
+    onChange={[Function]}
+    optionComponent={[Function]}
+    options={
+      Array [
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.name",
+          "value": "name",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.analysis_date",
+          "value": "analysis_date",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.reliability",
+          "value": "reliability",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.security",
+          "value": "security",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.maintainability",
+          "value": "maintainability",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.coverage",
+          "value": "coverage",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.duplications",
+          "value": "duplications",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.size",
+          "value": "size",
+        },
+      ]
+    }
+    searchable={false}
+    value="vulnerability"
+  />
+  <Tooltip
+    overlay="projects.sort_descending"
+    placement="bottom"
+  >
+    <ButtonIcon
+      className="js-projects-sorting-invert spacer-left"
+      color="#999"
+      onClick={[Function]}
+    >
+      <SortDescIcon
+        className=""
+      />
+    </ButtonIcon>
+  </Tooltip>
+</div>
+`;
+
+exports[`should render correctly for leak view 1`] = `
+<div>
+  <label>
+    projects.sort_by
+    :
+  </label>
+  <Select
+    className="little-spacer-left input-medium"
+    clearable={false}
+    onChange={[Function]}
+    optionComponent={[Function]}
+    options={
+      Array [
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.analysis_date",
+          "value": "analysis_date",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.name",
+          "value": "name",
+        },
+        Object {
+          "class": "projects-leak-sorting-option",
+          "label": "projects.sorting.new_reliability",
+          "value": "new_reliability",
+        },
+        Object {
+          "class": "projects-leak-sorting-option",
+          "label": "projects.sorting.new_security",
+          "value": "new_security",
+        },
+        Object {
+          "class": "projects-leak-sorting-option",
+          "label": "projects.sorting.new_maintainability",
+          "value": "new_maintainability",
+        },
+        Object {
+          "class": "projects-leak-sorting-option",
+          "label": "projects.sorting.new_coverage",
+          "value": "new_coverage",
+        },
+        Object {
+          "class": "projects-leak-sorting-option",
+          "label": "projects.sorting.new_duplications",
+          "value": "new_duplications",
+        },
+        Object {
+          "class": "projects-leak-sorting-option",
+          "label": "projects.sorting.new_lines",
+          "value": "new_lines",
+        },
+      ]
+    }
+    searchable={false}
+    value="new_coverage"
+  />
+  <Tooltip
+    overlay="projects.sort_ascending"
+    placement="bottom"
+  >
+    <ButtonIcon
+      className="js-projects-sorting-invert spacer-left"
+      color="#999"
+      onClick={[Function]}
+    >
+      <SortAscIcon
+        className=""
+      />
+    </ButtonIcon>
+  </Tooltip>
+</div>
+`;
+
+exports[`should render correctly for overall view 1`] = `
+<div>
+  <label>
+    projects.sort_by
+    :
+  </label>
+  <Select
+    className="little-spacer-left input-medium"
+    clearable={false}
+    onChange={[Function]}
+    optionComponent={[Function]}
+    options={
+      Array [
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.name",
+          "value": "name",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.analysis_date",
+          "value": "analysis_date",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.reliability",
+          "value": "reliability",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.security",
+          "value": "security",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.maintainability",
+          "value": "maintainability",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.coverage",
+          "value": "coverage",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.duplications",
+          "value": "duplications",
+        },
+        Object {
+          "class": undefined,
+          "label": "projects.sorting.size",
+          "value": "size",
+        },
+      ]
+    }
+    searchable={false}
+    value="name"
+  />
+  <Tooltip
+    overlay="projects.sort_ascending"
+    placement="bottom"
+  >
+    <ButtonIcon
+      className="js-projects-sorting-invert spacer-left"
+      color="#999"
+      onClick={[Function]}
+    >
+      <SortAscIcon
+        className=""
+      />
+    </ButtonIcon>
+  </Tooltip>
+</div>
+`;

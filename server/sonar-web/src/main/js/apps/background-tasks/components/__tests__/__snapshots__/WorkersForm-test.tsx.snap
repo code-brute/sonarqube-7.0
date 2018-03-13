@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`changes select 1`] = `
+<Modal
+  contentLabel="background_tasks.change_number_of_workers"
+  onRequestClose={[Function]}
+>
+  <header
+    className="modal-head"
+  >
+    <h2>
+      background_tasks.change_number_of_workers
+    </h2>
+  </header>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="modal-body"
+    >
+      <Select
+        className="input-tiny spacer-top"
+        clearable={false}
+        onChange={[Function]}
+        options={
+          Array [
+            Object {
+              "label": "1",
+              "value": 1,
+            },
+            Object {
+              "label": "2",
+              "value": 2,
+            },
+            Object {
+              "label": "3",
+              "value": 3,
+            },
+            Object {
+              "label": "4",
+              "value": 4,
+            },
+            Object {
+              "label": "5",
+              "value": 5,
+            },
+            Object {
+              "label": "6",
+              "value": 6,
+            },
+            Object {
+              "label": "7",
+              "value": 7,
+            },
+            Object {
+              "label": "8",
+              "value": 8,
+            },
+            Object {
+              "label": "9",
+              "value": 9,
+            },
+            Object {
+              "label": "10",
+              "value": 10,
+            },
+          ]
+        }
+        searchable={false}
+        value={1}
+      />
+      <div
+        className="big-spacer-top alert alert-success markdown"
+      >
+        background_tasks.change_number_of_workers.hint
+      </div>
+    </div>
+    <footer
+      className="modal-foot"
+    >
+      <div>
+        <button
+          disabled={false}
+          type="submit"
+        >
+          save
+        </button>
+        <button
+          className="button-link"
+          onClick={[Function]}
+          type="reset"
+        >
+          cancel
+        </button>
+      </div>
+    </footer>
+  </form>
+</Modal>
+`;
+
+exports[`changes select 2`] = `
+<Modal
+  contentLabel="background_tasks.change_number_of_workers"
+  onRequestClose={[Function]}
+>
+  <header
+    className="modal-head"
+  >
+    <h2>
+      background_tasks.change_number_of_workers
+    </h2>
+  </header>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="modal-body"
+    >
+      <Select
+        className="input-tiny spacer-top"
+        clearable={false}
+        onChange={[Function]}
+        options={
+          Array [
+            Object {
+              "label": "1",
+              "value": 1,
+            },
+            Object {
+              "label": "2",
+              "value": 2,
+            },
+            Object {
+              "label": "3",
+              "value": 3,
+            },
+            Object {
+              "label": "4",
+              "value": 4,
+            },
+            Object {
+              "label": "5",
+              "value": 5,
+            },
+            Object {
+              "label": "6",
+              "value": 6,
+            },
+            Object {
+              "label": "7",
+              "value": 7,
+            },
+            Object {
+              "label": "8",
+              "value": 8,
+            },
+            Object {
+              "label": "9",
+              "value": 9,
+            },
+            Object {
+              "label": "10",
+              "value": 10,
+            },
+          ]
+        }
+        searchable={false}
+        value={7}
+      />
+      <div
+        className="big-spacer-top alert alert-success markdown"
+      >
+        background_tasks.change_number_of_workers.hint
+      </div>
+    </div>
+    <footer
+      className="modal-foot"
+    >
+      <div>
+        <button
+          disabled={false}
+          type="submit"
+        >
+          save
+        </button>
+        <button
+          className="button-link"
+          onClick={[Function]}
+          type="reset"
+        >
+          cancel
+        </button>
+      </div>
+    </footer>
+  </form>
+</Modal>
+`;

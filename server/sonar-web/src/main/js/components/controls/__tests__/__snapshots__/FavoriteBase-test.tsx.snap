@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render favorite 1`] = `
+<Tooltip
+  overlay="favorite.current.TRK"
+  placement="left"
+>
+  <a
+    className="display-inline-block link-no-underline"
+    href="#"
+    onClick={[Function]}
+  >
+    <FavoriteIcon
+      favorite={true}
+    />
+  </a>
+</Tooltip>
+`;
+
+exports[`should render not favorite 1`] = `
+<Tooltip
+  overlay="favorite.check.TRK"
+  placement="left"
+>
+  <a
+    className="display-inline-block link-no-underline"
+    href="#"
+    onClick={[Function]}
+  >
+    <FavoriteIcon
+      favorite={false}
+    />
+  </a>
+</Tooltip>
+`;

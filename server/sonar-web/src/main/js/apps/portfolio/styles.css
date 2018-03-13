@@ -1,0 +1,112 @@
+/*
+ * SonarQube
+ * Copyright (C) 2009-2018 SonarSource SA
+ * mailto:info AT sonarsource DOT com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+.portfolio-measure-secondary-value {
+  line-height: var(--controlHeight);
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.portfolio-grid {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.portfolio-grid > li {
+  vertical-align: top;
+  width: 50%;
+  text-align: center;
+}
+
+.portfolio-grid > li.text-middle {
+  vertical-align: middle;
+}
+
+.portfolio-freshness {
+  line-height: var(--controlHeight);
+  margin-top: 12px;
+  color: var(--secondFontColor);
+  font-size: var(--smallFontSize);
+  white-space: nowrap;
+}
+
+.portfolio-effort {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--barBorderColor);
+}
+
+.portfolio-boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 20px;
+  padding: 15px 0;
+  border: 1px solid var(--barBorderColor);
+  background-color: #fff;
+}
+
+.portfolio-box {
+  position: relative;
+  width: 25%;
+  padding: 0 5px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.portfolio-box-title {
+  margin-bottom: 25px;
+  font-size: var(--bigFontSize);
+}
+
+.portfolio-box-title > .button-small > svg {
+  margin-top: 0;
+}
+
+.portfolio-box-rating,
+.portfolio-box-rating .rating {
+  display: block;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+}
+
+.portfolio-box-rating {
+  margin: 0 auto;
+  border: none;
+}
+
+.portfolio-box-rating .rating {
+  border-radius: 120px;
+  font-size: 60px;
+  text-align: center;
+}
+
+.portfolio-sub-components table.data > thead > tr > th {
+  font-size: var(--baseFontSize);
+  text-transform: none;
+}
+
+.portfolio-sub-components-cell {
+  width: 90px;
+}

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display the license field 1`] = `
+<Tooltip
+  overlay="SonarSource license"
+  placement="bottom"
+>
+  <li
+    className="little-spacer-bottom marketplace-plugin-license"
+  >
+    <FormattedMessage
+      defaultMessage="marketplace.licensed_under_x"
+      id="marketplace.licensed_under_x"
+      values={
+        Object {
+          "license": <span
+            className="js-plugin-license"
+          >
+            SonarSource license
+          </span>,
+        }
+      }
+    />
+  </li>
+</Tooltip>
+`;

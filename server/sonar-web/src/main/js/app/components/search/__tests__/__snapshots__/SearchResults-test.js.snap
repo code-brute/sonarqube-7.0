@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders "Show More" link 1`] = `
+<ul
+  className="menu"
+>
+  <li
+    className="dropdown-header"
+    key="header-TRK"
+  >
+    qualifiers.TRK
+  </li>
+  <span
+    key="foo"
+  >
+    foo
+  </span>
+  <span
+    key="bar"
+  >
+    bar
+  </span>
+  <SearchShowMore
+    allowMore={true}
+    key="more-TRK"
+    loadingMore={null}
+    onMoreClick={[MockFunction]}
+    onSelect={[MockFunction]}
+    qualifier="TRK"
+    selected={false}
+  />
+  <li
+    className="divider"
+    key="divider-BRC"
+  />
+  <li
+    className="dropdown-header"
+    key="header-BRC"
+  >
+    qualifiers.BRC
+  </li>
+  <span
+    key="qwe"
+  >
+    qwe
+  </span>
+  <span
+    key="qux"
+  >
+    qux
+  </span>
+</ul>
+`;
+
+exports[`renders different components and dividers between them 1`] = `
+<ul
+  className="menu"
+>
+  <li
+    className="dropdown-header"
+    key="header-TRK"
+  >
+    qualifiers.TRK
+  </li>
+  <span
+    key="foo"
+  >
+    foo
+  </span>
+  <span
+    key="bar"
+  >
+    bar
+  </span>
+  <li
+    className="divider"
+    key="divider-BRC"
+  />
+  <li
+    className="dropdown-header"
+    key="header-BRC"
+  >
+    qualifiers.BRC
+  </li>
+  <span
+    key="qwe"
+  >
+    qwe
+  </span>
+  <span
+    key="qux"
+  >
+    qux
+  </span>
+  <li
+    className="divider"
+    key="divider-FIL"
+  />
+  <li
+    className="dropdown-header"
+    key="header-FIL"
+  >
+    qualifiers.FIL
+  </li>
+  <span
+    key="zux"
+  >
+    zux
+  </span>
+</ul>
+`;

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd">
+
+<mapper namespace="org.sonar.db.issue.IssueMapper">
+
+  <sql id="issueColumns">
+    i.id,
+    i.kee as kee,
+    i.rule_id as ruleId,
+    i.severity as severity,
+    i.manual_severity as manualSeverity,
+    i.message as message,
+    i.line as line,
+    i.locations as locations,
+    i.gap as gap,
+    i.effort as effort,
+    i.status as status,
+    i.resolution as resolution,
+    i.checksum as checksum,
+    i.assignee as assignee,
+    i.author_login as authorLogin,
+    i.tags as tagsString,
+    i.issue_attributes as issueAttributes,
+    i.issue_creation_date as issueCreationTime,
+    i.issue_update_date as issueUpdateTime,
+    i.issue_close_date as issueCloseTime,
+    i.created_at as createdAt,
+    i.updated_at as updatedAt,
+    r.plugin_rule_key as ruleKey,
+    r.plugin_name as ruleRepo,
+    r.language as language,
+    p.kee as componentKey,
+    i.component_uuid as componentUuid,
+    p.module_uuid as moduleUuid,
+    p.module_uuid_path as moduleUuidPath,
+    p.path as filePath,
+    root.kee as projectKey,
+    i.project_uuid as projectUuid,
+    i.issue_type as type
+  </sql>
+
+  <sql id="sortColumn">
+    <if test="query.sort() != null">,
+      <choose>
+        <when test="'SEVERITY'.equals(query.sort())">
+          i.severity as severity
+        </when>
+        <when test="'STATUS'.equals(query.sort())">
+          i.status as status
+        </when>
+        <when test="'ASSIGNEE'.equals(query.sort())">
+          i.assignee as assignee
+        </when>
+        <when test="'CREATION_DATE'.equals(query.sort())">
+          i.issue_creation_date as issueCreationTime
+        </when>
+        <when test="'UPDATE_DATE'.equals(query.sort())">
+          i.issue_update_date as issueUpdateTime
+        </when>
+        <when test="'CLOSE_DATE'.equals(query.sort())">
+          i.issue_close_date as issueCloseTime
+        </when>
+      </choose>
+    </if>
+  </sql>
+
+  <sql id="issueForIndexingColumns">
+    i.kee as "key",
+    root.uuid as "projectUuid",
+    i.updated_at as "updatedAt",
+    i.assignee,
+    i.gap,
+    i.issue_attributes as "attributes",
+    i.line,
+    i.message,
+    i.resolution,
+    i.severity,
+    i.manual_severity as "manualSeverity",
+    i.checksum,
+    i.status,
+    i.effort,
+    i.author_login as "authorLogin",
+    i.issue_close_date as "issueCloseDate",
+    i.issue_creation_date as "issueCreationDate",
+    i.issue_update_date as "issueUpdateDate",
+    r.plugin_name as "pluginName",
+    r.plugin_rule_key as "pluginRuleKey",
+    r.language,
+    p.uuid as "projectUuid",
+    p.module_uuid_path as "moduleUuidPath",
+    p.path,
+    p.scope,
+    p.organization_uuid as "organizationUuid",
+    i.tags,
+    i.issue_type as "issueType"
+  </sql>
+
+
+  <insert id="insert" parameterType="Issue" useGeneratedKeys="false" keyProperty="id">
+    INSERT INTO issues (kee, rule_id, severity, manual_severity,
+    message, line, locations, gap, effort, status, tags,
+    resolution, checksum, assignee, author_login, issue_attributes, issue_creation_date, issue_update_date,
+    issue_close_date, created_at, updated_at, component_uuid, project_uuid, issue_type)
+    VALUES (#{kee,jdbcType=VARCHAR}, #{ruleId,jdbcType=INTEGER},
+    #{severity,jdbcType=VARCHAR},
+    #{manualSeverity,jdbcType=BOOLEAN}, #{message,jdbcType=VARCHAR}, #{line,jdbcType=INTEGER},
+    #{locations,jdbcType=BINARY},
+    #{gap,jdbcType=DOUBLE}, #{effort,jdbcType=INTEGER}, #{status,jdbcType=VARCHAR},
+    #{tagsString,jdbcType=VARCHAR}, #{resolution,jdbcType=VARCHAR}, #{checksum,jdbcType=VARCHAR},
+    #{assignee,jdbcType=VARCHAR}, #{authorLogin,jdbcType=VARCHAR},
+    #{issueAttributes,jdbcType=VARCHAR},
+    #{issueCreationTime,jdbcType=BIGINT},#{issueUpdateTime,jdbcType=BIGINT}, #{issueCloseTime,jdbcType=BIGINT},
+    #{createdAt,jdbcType=BIGINT}, #{updatedAt,jdbcType=BIGINT},
+    #{componentUuid,jdbcType=VARCHAR}, #{projectUuid,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER})
+  </insert>
+
+  <!--
+    IMPORTANT - invariant columns can't be updated. See IssueDto#toDtoForUpdate()
+  -->
+  <update id="update" parameterType="Issue">
+    update issues set
+    severity=#{severity,jdbcType=VARCHAR},
+    manual_severity=#{manualSeverity,jdbcType=BOOLEAN},
+    message=#{message,jdbcType=VARCHAR},
+    line=#{line,jdbcType=INTEGER},
+    locations=#{locations,jdbcType=BINARY},
+    gap=#{gap,jdbcType=DOUBLE},
+    effort=#{effort,jdbcType=INTEGER},
+    status=#{status,jdbcType=VARCHAR},
+    resolution=#{resolution,jdbcType=VARCHAR},
+    checksum=#{checksum,jdbcType=VARCHAR},
+    assignee=#{assignee,jdbcType=VARCHAR},
+    author_login=#{authorLogin,jdbcType=VARCHAR},
+    tags=#{tagsString,jdbcType=VARCHAR},
+    project_uuid=#{projectUuid,jdbcType=VARCHAR},
+    issue_attributes=#{issueAttributes,jdbcType=VARCHAR},
+    issue_creation_date=#{issueCreationTime,jdbcType=BIGINT},
+    issue_update_date=#{issueUpdateTime,jdbcType=BIGINT},
+    issue_close_date=#{issueCloseTime,jdbcType=BIGINT},
+    updated_at=#{updatedAt,jdbcType=BIGINT},
+    issue_type=#{type,jdbcType=INTEGER}
+    where kee = #{kee}
+  </update>
+
+  <!--
+   IMPORTANT - invariant columns can't be updated. See IssueDto#toDtoForUpdate()
+ -->
+  <update id="updateIfBeforeSelectedDate" parameterType="Issue">
+    update issues set
+    severity=#{severity,jdbcType=VARCHAR},
+    manual_severity=#{manualSeverity,jdbcType=BOOLEAN},
+    message=#{message,jdbcType=VARCHAR},
+    line=#{line,jdbcType=INTEGER},
+    locations=#{locations,jdbcType=BINARY},
+    gap=#{gap,jdbcType=DOUBLE},
+    effort=#{effort,jdbcType=INTEGER},
+    status=#{status,jdbcType=VARCHAR},
+    resolution=#{resolution,jdbcType=VARCHAR},
+    checksum=#{checksum,jdbcType=VARCHAR},
+    assignee=#{assignee,jdbcType=VARCHAR},
+    author_login=#{authorLogin,jdbcType=VARCHAR},
+    tags=#{tagsString,jdbcType=VARCHAR},
+    component_uuid=#{componentUuid,jdbcType=VARCHAR},
+    project_uuid=#{projectUuid,jdbcType=VARCHAR},
+    issue_attributes=#{issueAttributes,jdbcType=VARCHAR},
+    issue_creation_date=#{issueCreationTime,jdbcType=BIGINT},
+    issue_update_date=#{issueUpdateTime,jdbcType=BIGINT},
+    issue_close_date=#{issueCloseTime,jdbcType=BIGINT},
+    updated_at=#{updatedAt,jdbcType=BIGINT},
+    issue_type=#{type,jdbcType=INTEGER}
+    where kee = #{kee} and updated_at &lt;= #{selectedAt}
+  </update>
+
+  <select id="selectByKey" parameterType="String" resultType="Issue">
+    select
+    <include refid="issueColumns"/>
+    from issues i
+    inner join rules r on r.id=i.rule_id
+    inner join projects p on p.uuid=i.component_uuid
+    inner join projects root on root.uuid=i.project_uuid
+    where i.kee=#{kee,jdbcType=VARCHAR}
+  </select>
+
+  <select id="scrollNonClosedByComponentUuid" parameterType="String" resultType="Issue" fetchSize="${_scrollFetchSize}" resultSetType="FORWARD_ONLY">
+    select
+    <include refid="issueColumns"/>
+    from issues i
+    inner join rules r on r.id=i.rule_id
+    inner join projects p on p.uuid=i.component_uuid
+    inner join projects root on root.uuid=i.project_uuid
+    where
+    i.component_uuid = #{componentUuid,jdbcType=VARCHAR} and
+    i.status &lt;&gt; 'CLOSED'
+  </select>
+
+  <select id="selectComponentUuidsOfOpenIssuesForProjectUuid" parameterType="string" resultType="string">
+    select distinct(i.component_uuid)
+    from issues i
+    where i.project_uuid=#{projectUuid,jdbcType=VARCHAR} and i.status &lt;&gt; 'CLOSED'
+  </select>
+
+  <select id="selectByKeys" parameterType="map" resultType="Issue">
+    select
+    <include refid="issueColumns"/>
+    from issues i
+    inner join rules r on r.id=i.rule_id
+    inner join projects p on p.uuid=i.component_uuid
+    inner join projects root on root.uuid=i.project_uuid
+    where i.kee in
+    <foreach collection="list" open="(" close=")" item="key" separator=",">
+      #{key,jdbcType=VARCHAR}
+    </foreach>
+  </select>
+
+  <select id="selectOpenByComponentUuids" parameterType="map" resultType="ShortBranchIssue">
+    select
+      i.kee as kee,
+      i.message as message,
+      i.line as line,
+      i.status as status,
+      i.checksum as checksum,
+      i.issue_creation_date as issueCreationDate,
+      r.plugin_rule_key as ruleKey,
+      r.plugin_name as ruleRepo,
+      b.kee as branchName
+    from issues i
+    inner join rules r on r.id = i.rule_id
+    inner join project_branches b on i.project_uuid = b.uuid
+    where i.component_uuid in
+      <foreach collection="list" open="(" close=")" item="key" separator=",">
+        #{key,jdbcType=VARCHAR}
+      </foreach>
+      and i.status &lt;&gt; 'CLOSED'
+  </select>
+
+  <select id="scrollNonClosedByModuleOrProject" parameterType="map" resultType="Issue" fetchSize="${_scrollFetchSize}" resultSetType="FORWARD_ONLY">
+    select
+    <include refid="issueColumns"/>
+    from issues i
+    inner join rules r on r.id = i.rule_id
+    inner join projects p on p.uuid = i.component_uuid
+    inner join projects root on root.uuid = i.project_uuid
+    where
+    i.project_uuid = #{projectUuid, jdbcType=VARCHAR} and
+    p.module_uuid_path like  #{likeModuleUuidPath, jdbcType=VARCHAR} escape '/' and
+    i.status &lt;&gt; 'CLOSED'
+  </select>
+
+  <select id="selectIssueGroupsByBaseComponent" resultType="org.sonar.db.issue.IssueGroupDto" parameterType="map">
+    select i.issue_type as ruleType, i.severity as severity, i.resolution as resolution, i.status as status, sum(i.effort) as effort, count(i.issue_type) as "count", (i.issue_creation_date &gt;= #{leakPeriodBeginningDate,jdbcType=BIGINT}) as inLeak
+    from issues i
+    inner join projects p on p.uuid = i.component_uuid and p.project_uuid = i.project_uuid
+    where i.status !='CLOSED'
+    and i.project_uuid = #{baseComponent.projectUuid,jdbcType=VARCHAR}
+    and (p.uuid_path like #{baseComponent.uuidPathLikeIncludingSelf,jdbcType=VARCHAR} escape '/' or p.uuid = #{baseComponent.uuid,jdbcType=VARCHAR})
+    group by i.issue_type, i.severity, i.resolution, i.status, inLeak
+  </select>
+
+  <select id="selectIssueGroupsByBaseComponent" resultType="org.sonar.db.issue.IssueGroupDto" parameterType="map" databaseId="oracle">
+    select i2.issue_type as ruleType, i2.severity as severity, i2.resolution as resolution, i2.status as status, sum(i2.effort) as effort, count(i2.issue_type) as "count", i2.inLeak as inLeak
+    from (
+      select i.issue_type, i.severity, i.resolution, i.status, i.effort, case when i.issue_creation_date &gt; #{leakPeriodBeginningDate,jdbcType=BIGINT} then 1 else 0 end as inLeak
+      from issues i
+      inner join projects p on p.uuid = i.component_uuid and p.project_uuid = i.project_uuid
+      where i.status !='CLOSED'
+      and i.project_uuid = #{baseComponent.projectUuid,jdbcType=VARCHAR}
+      and (p.uuid_path like #{baseComponent.uuidPathLikeIncludingSelf,jdbcType=VARCHAR} escape '/' or p.uuid = #{baseComponent.uuid,jdbcType=VARCHAR})
+    ) i2
+    group by i2.issue_type, i2.severity, i2.resolution, i2.status, i2.inLeak
+  </select>
+
+  <select id="selectIssueGroupsByBaseComponent" resultType="org.sonar.db.issue.IssueGroupDto" parameterType="map" databaseId="mssql">
+    select i2.issue_type as ruleType, i2.severity as severity, i2.resolution as resolution, i2.status as status, sum(i2.effort) as effort, count(i2.issue_type) as "count", i2.inLeak as inLeak
+    from (
+    select i.issue_type, i.severity, i.resolution, i.status, i.effort, case when i.issue_creation_date &gt; #{leakPeriodBeginningDate,jdbcType=BIGINT} then 1 else 0 end as inLeak
+    from issues i
+    inner join projects p on p.uuid = i.component_uuid and p.project_uuid = i.project_uuid
+    where i.status !='CLOSED'
+    and i.project_uuid = #{baseComponent.projectUuid,jdbcType=VARCHAR}
+    and (p.uuid_path like #{baseComponent.uuidPathLikeIncludingSelf,jdbcType=VARCHAR} escape '/' or p.uuid = #{baseComponent.uuid,jdbcType=VARCHAR})
+    ) i2
+    group by i2.issue_type, i2.severity, i2.resolution, i2.status, i2.inLeak
+  </select>
+</mapper>
+

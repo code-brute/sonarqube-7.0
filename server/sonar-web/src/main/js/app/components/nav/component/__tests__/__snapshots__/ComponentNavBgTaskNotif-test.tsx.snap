@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders background task error correctly 1`] = `
+<NavBarNotif
+  className="alert alert-danger"
+>
+  <span>
+    component_navigation.status.failed
+  </span>
+</NavBarNotif>
+`;
+
+exports[`renders background task in progress info correctly 1`] = `
+<NavBarNotif
+  className="alert alert-info"
+>
+  <i
+    className="spinner spacer-right text-bottom"
+  />
+  <span>
+    component_navigation.status.in_progress
+  </span>
+</NavBarNotif>
+`;
+
+exports[`renders background task license info correctly 1`] = `
+<NavBarNotif
+  className="alert alert-danger"
+>
+  <span>
+    Foo
+  </span>
+  <Link
+    className="little-spacer-left"
+    onlyActiveOnIndex={false}
+    style={Object {}}
+    to="/admin/extension/license/app"
+  >
+    license.component_navigation.button.LICENSING
+    .
+  </Link>
+</NavBarNotif>
+`;
+
+exports[`renders background task pending info correctly 1`] = `
+<NavBarNotif
+  className="alert alert-info"
+>
+  <PendingIcon
+    className="spacer-right"
+  />
+  <span>
+    component_navigation.status.pending
+  </span>
+</NavBarNotif>
+`;
+
+exports[`renders background task pending info correctly for admin 1`] = `
+<NavBarNotif
+  className="alert alert-info"
+>
+  <PendingIcon
+    className="spacer-right"
+  />
+  <FormattedMessage
+    defaultMessage="component_navigation.status.pending.admin"
+    id="component_navigation.status.pending.admin"
+    values={
+      Object {
+        "url": <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to={
+            Object {
+              "pathname": "/project/background_tasks",
+              "query": Object {
+                "id": "foo",
+                "status": "__ALL__",
+              },
+            }
+          }
+        >
+          background_tasks.page
+        </Link>,
+      }
+    }
+  />
+</NavBarNotif>
+`;

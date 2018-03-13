@@ -1,0 +1,110 @@
+/*
+ * SonarQube
+ * Copyright (C) 2009-2018 SonarSource SA
+ * mailto:info AT sonarsource DOT com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+.settings-layout {
+  margin-bottom: 60px;
+}
+
+.settings-definitions-list > li + li {
+  margin-top: 30px;
+}
+
+.settings-definition {
+  display: flex;
+  align-items: stretch;
+}
+
+.settings-definition-changed {
+  margin: -10px -20px;
+  padding: 9px 20px;
+  border-top: 1px solid #faebcc;
+  border-bottom: 1px solid #faebcc;
+  background-color: #fcf8e3;
+}
+
+.settings-definition-left {
+  width: 330px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.settings-definition-right {
+  position: relative;
+  width: calc(100% - 330px);
+  box-sizing: border-box;
+}
+
+.settings-definition-name {
+  text-overflow: ellipsis;
+}
+
+.settings-definition-key {
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.settings-definition-key:hover {
+  overflow: visible;
+}
+
+.settings-definition-state {
+  min-height: 32px;
+  padding-bottom: 4px;
+}
+
+.settings-definition-state > span {
+  display: flex;
+}
+
+.settings-definition-changes {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dotted var(--barBorderColor);
+}
+
+.settings-sub-categories-list {
+}
+
+.settings-sub-categories-list > li {
+}
+
+.settings-sub-categories-list > li + li {
+  margin: 30px -20px 0;
+  padding: 30px 20px;
+  border-top: 1px solid var(--barBorderColor);
+}
+
+.settings-sub-category-name {
+  margin-bottom: 20px;
+  font-size: var(--bigFontSize);
+}
+
+.settings-sub-category-description {
+  margin-top: -15px;
+  margin-bottom: 20px;
+  color: var(--secondFontColor);
+}
+
+.settings-large-input {
+  width: 100% !important;
+  max-width: 400px;
+  min-width: 200px;
+}

@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should support more than two nodes 1`] = `
+<ul>
+  <HealthCard
+    biggerHealth={true}
+    health="RED"
+    healthCauses={
+      Array [
+        "Database down",
+      ]
+    }
+    name="System"
+    onClick={[Function]}
+    open={true}
+    sysInfoData={
+      Object {
+        "High Availability": true,
+        "Logs Level": "INFO",
+        "Server ID": "MyServerId",
+      }
+    }
+  />
+  <li
+    className="note system-info-health-title"
+  >
+    system.application_nodes_title
+  </li>
+  <HealthCard
+    health="GREEN"
+    healthCauses={Array []}
+    key="Bar"
+    name="Bar"
+    onClick={[Function]}
+    open={false}
+    sysInfoData={
+      Object {
+        "Compute Engine Logging": Object {
+          "Logs Level": "INFO",
+        },
+        "Web Logging": Object {
+          "Logs Level": "INFO",
+        },
+      }
+    }
+  />
+  <li
+    className="note system-info-health-title"
+  >
+    system.search_nodes_title
+  </li>
+  <HealthCard
+    health="YELLOW"
+    healthCauses={Array []}
+    key="Baz"
+    name="Baz"
+    onClick={[Function]}
+    open={false}
+    sysInfoData={
+      Object {
+        "Compute Engine Logging": Object {
+          "Logs Level": "INFO",
+        },
+        "Web Logging": Object {
+          "Logs Level": "INFO",
+        },
+      }
+    }
+  />
+</ul>
+`;

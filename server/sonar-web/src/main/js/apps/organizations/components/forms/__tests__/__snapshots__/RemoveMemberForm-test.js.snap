@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should correctly handle user interactions 1`] = `
+Array [
+  Array [
+    Object {
+      "avatar": "",
+      "groupCount": 3,
+      "login": "admin",
+      "name": "Admin Istrator",
+    },
+  ],
+]
+`;
+
+exports[`should render and open the modal 1`] = `
+<ActionsDropdownItem
+  destructive={true}
+  onClick={[Function]}
+>
+  organization.members.remove
+</ActionsDropdownItem>
+`;
+
+exports[`should render and open the modal 2`] = `
+Array [
+  <ActionsDropdownItem
+    destructive={true}
+    onClick={[Function]}
+  >
+    organization.members.remove
+  </ActionsDropdownItem>,
+  <Modal
+    contentLabel="users.remove"
+    onRequestClose={[Function]}
+  >
+    <header
+      className="modal-head"
+    >
+      <h2>
+        users.remove
+      </h2>
+    </header>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="modal-body markdown"
+      >
+        <p>
+          organization.members.remove_x.Admin Istrator.MyOrg
+        </p>
+      </div>
+      <footer
+        className="modal-foot"
+      >
+        <div>
+          <button
+            autoFocus={true}
+            className="button-red"
+            type="submit"
+          >
+            remove
+          </button>
+          <button
+            className="button-link"
+            onClick={[Function]}
+            type="reset"
+          >
+            cancel
+          </button>
+        </div>
+      </footer>
+    </form>
+  </Modal>,
+]
+`;

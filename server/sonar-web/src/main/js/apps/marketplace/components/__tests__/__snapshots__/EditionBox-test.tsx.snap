@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should correctly hide action buttons 1`] = `
+<div
+  className="boxed-group boxed-group-inner marketplace-edition"
+>
+  <EditionBoxBadge
+    editionKey="foo"
+    status={
+      Object {
+        "currentEditionKey": "",
+        "installationStatus": "NONE",
+        "nextEditionKey": "",
+      }
+    }
+  />
+  <div>
+    <h3
+      className="spacer-bottom"
+    >
+      Foo
+    </h3>
+    <p>
+      Foo desc
+    </p>
+  </div>
+  <div
+    className="marketplace-edition-action spacer-top"
+  >
+    <a
+      href="more_url"
+      target="_blank"
+    >
+      marketplace.learn_more
+    </a>
+  </div>
+</div>
+`;
+
+exports[`should disable action button 1`] = `
+<div
+  className="boxed-group boxed-group-inner marketplace-edition"
+>
+  <EditionBoxBadge
+    editionKey="foo"
+    status={
+      Object {
+        "currentEditionKey": "",
+        "installationStatus": "NONE",
+        "nextEditionKey": "",
+      }
+    }
+  />
+  <div>
+    <h3
+      className="spacer-bottom"
+    >
+      Foo
+    </h3>
+    <p>
+      Foo desc
+    </p>
+  </div>
+  <div
+    className="marketplace-edition-action spacer-top"
+  >
+    <a
+      href="more_url"
+      target="_blank"
+    >
+      marketplace.learn_more
+    </a>
+    <button
+      disabled={true}
+      onClick={[Function]}
+    >
+      action
+    </button>
+  </div>
+</div>
+`;
+
+exports[`should display the edition 1`] = `
+<div
+  className="boxed-group boxed-group-inner marketplace-edition"
+>
+  <EditionBoxBadge
+    editionKey="foo"
+    status={
+      Object {
+        "currentEditionKey": "",
+        "installationStatus": "NONE",
+        "nextEditionKey": "",
+      }
+    }
+  />
+  <div>
+    <h3
+      className="spacer-bottom"
+    >
+      Foo
+    </h3>
+    <p>
+      Foo desc
+    </p>
+  </div>
+  <div
+    className="marketplace-edition-action spacer-top"
+  >
+    <a
+      href="more_url"
+      target="_blank"
+    >
+      marketplace.learn_more
+    </a>
+    <button
+      disabled={false}
+      onClick={[Function]}
+    >
+      action
+    </button>
+  </div>
+</div>
+`;

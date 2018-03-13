@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly the list of series 1`] = `
+<div
+  className="project-activity-graph-legends"
+>
+  <span
+    className="spacer-left spacer-right"
+    key="bugs"
+  >
+    <GraphsLegendItem
+      metric="bugs"
+      name="Bugs"
+      removeMetric={[Function]}
+      showWarning={false}
+      style="0"
+    />
+  </span>
+  <span
+    className="spacer-left spacer-right"
+    key="my_metric"
+  >
+    <GraphsLegendItem
+      metric="my_metric"
+      name="My Metric"
+      removeMetric={[Function]}
+      showWarning={false}
+      style="1"
+    />
+  </span>
+  <Tooltip
+    key="foo"
+    overlay="project_activity.graphs.custom.metric_no_history"
+    placement="bottom"
+  >
+    <span
+      className="spacer-left spacer-right"
+    >
+      <GraphsLegendItem
+        metric="foo"
+        name="Foo"
+        removeMetric={[Function]}
+        showWarning={true}
+        style="2"
+      />
+    </span>
+  </Tooltip>
+</div>
+`;

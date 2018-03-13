@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render multiselect with selected elements 1`] = `
+<div
+  className="multi-select"
+>
+  <div
+    className="menu-search"
+  >
+    <SearchBox
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder=""
+      value=""
+    />
+  </div>
+  <ul
+    className="menu"
+  >
+    <MultiSelectOption
+      active={true}
+      custom={false}
+      element="bar"
+      key="bar"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      selected={true}
+    />
+  </ul>
+</div>
+`;
+
+exports[`should render multiselect with selected elements 2`] = `
+<div
+  className="multi-select"
+>
+  <div
+    className="menu-search"
+  >
+    <SearchBox
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder=""
+      value=""
+    />
+  </div>
+  <ul
+    className="menu"
+  >
+    <MultiSelectOption
+      active={true}
+      custom={false}
+      element="bar"
+      key="bar"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      selected={true}
+    />
+    <MultiSelectOption
+      active={false}
+      custom={false}
+      element="foo"
+      key="foo"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      selected={false}
+    />
+    <MultiSelectOption
+      active={false}
+      custom={false}
+      element="baz"
+      key="baz"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      selected={false}
+    />
+  </ul>
+</div>
+`;
+
+exports[`should render multiselect with selected elements 3`] = `
+<div
+  className="multi-select"
+>
+  <div
+    className="menu-search"
+  >
+    <SearchBox
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder=""
+      value=""
+    />
+  </div>
+  <ul
+    className="menu"
+  >
+    <MultiSelectOption
+      active={false}
+      custom={false}
+      element="bar"
+      key="bar"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      selected={true}
+    />
+    <MultiSelectOption
+      active={false}
+      custom={false}
+      element="foo"
+      key="foo"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      selected={false}
+    />
+    <MultiSelectOption
+      active={true}
+      custom={false}
+      element="baz"
+      key="baz"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      selected={false}
+    />
+  </ul>
+</div>
+`;
+
+exports[`should render multiselect with selected elements 4`] = `
+<div
+  className="multi-select"
+>
+  <div
+    className="menu-search"
+  >
+    <SearchBox
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder=""
+      value="test"
+    />
+  </div>
+  <ul
+    className="menu"
+  >
+    <MultiSelectOption
+      active={false}
+      custom={false}
+      element="bar"
+      key="bar"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      selected={true}
+    />
+    <MultiSelectOption
+      active={false}
+      custom={false}
+      element="foo"
+      key="foo"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      selected={false}
+    />
+    <MultiSelectOption
+      active={true}
+      custom={false}
+      element="baz"
+      key="baz"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      selected={false}
+    />
+    <MultiSelectOption
+      active={false}
+      custom={true}
+      element="test"
+      key="test"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      selected={false}
+    />
+  </ul>
+</div>
+`;

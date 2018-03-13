@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<div
+  className="layout-page projects-page"
+  id="projects-page"
+>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="projects.page"
+  />
+  <ScreenPositionHelper
+    className="layout-page-side-outer"
+  />
+  <div
+    className="layout-page-main"
+  >
+    <div
+      className="layout-page-header-panel layout-page-main-header"
+    >
+      <div
+        className="layout-page-header-panel-inner layout-page-main-header-inner"
+      >
+        <div
+          className="layout-page-main-inner"
+        >
+          <PageHeader
+            currentUser={
+              Object {
+                "isLoggedIn": true,
+              }
+            }
+            isFavorite={false}
+            loading={false}
+            onPerspectiveChange={[Function]}
+            onQueryChange={[Function]}
+            onSonarCloud={false}
+            onSortChange={[Function]}
+            projects={
+              Array [
+                Object {
+                  "key": "foo",
+                  "measures": Object {},
+                  "name": "Foo",
+                },
+              ]
+            }
+            query={
+              Object {
+                "coverage": undefined,
+                "duplications": undefined,
+                "gate": undefined,
+                "languages": undefined,
+                "maintainability": undefined,
+                "new_coverage": undefined,
+                "new_duplications": undefined,
+                "new_lines": undefined,
+                "new_maintainability": undefined,
+                "new_reliability": undefined,
+                "new_security": undefined,
+                "reliability": undefined,
+                "search": undefined,
+                "security": undefined,
+                "size": undefined,
+                "sort": undefined,
+                "tags": undefined,
+                "view": undefined,
+                "visualization": undefined,
+              }
+            }
+            selectedSort="name"
+            total={0}
+            view="overall"
+            visualization="risk"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="layout-page-main-inner"
+    >
+      <ProjectsList
+        cardType="overall"
+        isFavorite={false}
+        isFiltered={false}
+        onSonarCloud={false}
+        projects={
+          Array [
+            Object {
+              "key": "foo",
+              "measures": Object {},
+              "name": "Foo",
+            },
+          ]
+        }
+        query={
+          Object {
+            "coverage": undefined,
+            "duplications": undefined,
+            "gate": undefined,
+            "languages": undefined,
+            "maintainability": undefined,
+            "new_coverage": undefined,
+            "new_duplications": undefined,
+            "new_lines": undefined,
+            "new_maintainability": undefined,
+            "new_reliability": undefined,
+            "new_security": undefined,
+            "reliability": undefined,
+            "search": undefined,
+            "security": undefined,
+            "size": undefined,
+            "sort": undefined,
+            "tags": undefined,
+            "view": undefined,
+            "visualization": undefined,
+          }
+        }
+      />
+      <ListFooter
+        count={1}
+        loadMore={[Function]}
+        ready={true}
+        total={0}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders 2`] = `
+<div
+  className="layout-page projects-page"
+  id="projects-page"
+>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="projects.page"
+  />
+  <ScreenPositionHelper
+    className="layout-page-side-outer"
+  />
+  <div
+    className="layout-page-main"
+  >
+    <div
+      className="layout-page-header-panel layout-page-main-header"
+    >
+      <div
+        className="layout-page-header-panel-inner layout-page-main-header-inner"
+      >
+        <div
+          className="layout-page-main-inner"
+        >
+          <PageHeader
+            currentUser={
+              Object {
+                "isLoggedIn": true,
+              }
+            }
+            isFavorite={false}
+            loading={false}
+            onPerspectiveChange={[Function]}
+            onQueryChange={[Function]}
+            onSonarCloud={false}
+            onSortChange={[Function]}
+            projects={
+              Array [
+                Object {
+                  "key": "foo",
+                  "measures": Object {},
+                  "name": "Foo",
+                },
+              ]
+            }
+            query={
+              Object {
+                "view": "visualizations",
+              }
+            }
+            selectedSort="name"
+            total={0}
+            view="visualizations"
+            visualization="risk"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="layout-page-main-inner"
+    >
+      <Visualizations
+        displayOrganizations={false}
+        projects={
+          Array [
+            Object {
+              "key": "foo",
+              "measures": Object {},
+              "name": "Foo",
+            },
+          ]
+        }
+        total={0}
+        visualization="risk"
+      />
+    </div>
+  </div>
+</div>
+`;

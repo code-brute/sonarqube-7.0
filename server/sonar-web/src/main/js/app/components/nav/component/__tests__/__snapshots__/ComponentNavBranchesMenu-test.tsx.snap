@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders list 1`] = `
+<div
+  className="dropdown-menu"
+>
+  <div
+    className="menu-search"
+  >
+    <SearchBox
+      autoFocus={true}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="branches.search_for_branches"
+      value=""
+    />
+  </div>
+  <ul
+    className="menu menu-vertically-limited"
+  >
+    <React.Fragment
+      key="master"
+    >
+      <ComponentNavBranchesMenuItem
+        branch={
+          Object {
+            "isMain": true,
+            "name": "master",
+          }
+        }
+        component={
+          Object {
+            "key": "component",
+          }
+        }
+        key="master"
+        onSelect={[Function]}
+        selected={true}
+      />
+    </React.Fragment>
+    <React.Fragment
+      key="baz"
+    >
+      <li
+        className="divider"
+      />
+      <li
+        className="dropdown-header"
+      >
+        branches.orphan_branches
+        <Tooltip
+          overlay="branches.orphan_branches.tooltip"
+          placement="bottom"
+        >
+          <i
+            className="icon-help spacer-left"
+          />
+        </Tooltip>
+      </li>
+      <ComponentNavBranchesMenuItem
+        branch={
+          Object {
+            "isMain": false,
+            "isOrphan": true,
+            "mergeBranch": "master",
+            "name": "baz",
+            "status": Object {
+              "bugs": 0,
+              "codeSmells": 0,
+              "vulnerabilities": 0,
+            },
+            "type": "SHORT",
+          }
+        }
+        component={
+          Object {
+            "key": "component",
+          }
+        }
+        key="baz"
+        onSelect={[Function]}
+        selected={false}
+      />
+    </React.Fragment>
+    <React.Fragment
+      key="foo"
+    >
+      <ComponentNavBranchesMenuItem
+        branch={
+          Object {
+            "isMain": false,
+            "isOrphan": undefined,
+            "mergeBranch": "master",
+            "name": "foo",
+            "status": Object {
+              "bugs": 0,
+              "codeSmells": 0,
+              "vulnerabilities": 0,
+            },
+            "type": "SHORT",
+          }
+        }
+        component={
+          Object {
+            "key": "component",
+          }
+        }
+        key="foo"
+        onSelect={[Function]}
+        selected={false}
+      />
+    </React.Fragment>
+    <React.Fragment
+      key="bar"
+    >
+      <li
+        className="divider"
+      />
+      <ComponentNavBranchesMenuItem
+        branch={
+          Object {
+            "isMain": false,
+            "name": "bar",
+            "type": "LONG",
+          }
+        }
+        component={
+          Object {
+            "key": "component",
+          }
+        }
+        key="bar"
+        onSelect={[Function]}
+        selected={false}
+      />
+    </React.Fragment>
+    <React.Fragment
+      key="baz"
+    >
+      <li
+        className="divider"
+      />
+      <li
+        className="dropdown-header"
+      >
+        branches.orphan_branches
+        <Tooltip
+          overlay="branches.orphan_branches.tooltip"
+          placement="bottom"
+        >
+          <i
+            className="icon-help spacer-left"
+          />
+        </Tooltip>
+      </li>
+      <ComponentNavBranchesMenuItem
+        branch={
+          Object {
+            "isMain": false,
+            "isOrphan": true,
+            "mergeBranch": "master",
+            "name": "baz",
+            "status": Object {
+              "bugs": 0,
+              "codeSmells": 0,
+              "vulnerabilities": 0,
+            },
+            "type": "SHORT",
+          }
+        }
+        component={
+          Object {
+            "key": "component",
+          }
+        }
+        key="baz"
+        onSelect={[Function]}
+        selected={false}
+      />
+    </React.Fragment>
+  </ul>
+</div>
+`;
+
+exports[`searches 1`] = `
+<div
+  className="dropdown-menu"
+>
+  <div
+    className="menu-search"
+  >
+    <SearchBox
+      autoFocus={true}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="branches.search_for_branches"
+      value="bar"
+    />
+  </div>
+  <ul
+    className="menu menu-vertically-limited"
+  >
+    <React.Fragment
+      key="foobar"
+    >
+      <ComponentNavBranchesMenuItem
+        branch={
+          Object {
+            "isMain": false,
+            "isOrphan": undefined,
+            "mergeBranch": "master",
+            "name": "foobar",
+            "status": Object {
+              "bugs": 0,
+              "codeSmells": 0,
+              "vulnerabilities": 0,
+            },
+            "type": "SHORT",
+          }
+        }
+        component={
+          Object {
+            "key": "component",
+          }
+        }
+        key="foobar"
+        onSelect={[Function]}
+        selected={true}
+      />
+    </React.Fragment>
+    <React.Fragment
+      key="bar"
+    >
+      <li
+        className="divider"
+      />
+      <ComponentNavBranchesMenuItem
+        branch={
+          Object {
+            "isMain": false,
+            "name": "bar",
+            "type": "LONG",
+          }
+        }
+        component={
+          Object {
+            "key": "component",
+          }
+        }
+        key="bar"
+        onSelect={[Function]}
+        selected={false}
+      />
+    </React.Fragment>
+  </ul>
+</div>
+`;

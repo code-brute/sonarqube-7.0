@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<ul>
+  <HealthCard
+    biggerHealth={true}
+    health="RED"
+    healthCauses={
+      Array [
+        "Database down",
+      ]
+    }
+    name="System"
+    onClick={[Function]}
+    open={false}
+    sysInfoData={
+      Object {
+        "High Availability": true,
+        "Logs Level": "DEBUG",
+        "Server ID": "MyServerId",
+      }
+    }
+  />
+  <HealthCard
+    key="Web"
+    name="Web"
+    onClick={[Function]}
+    open={false}
+    sysInfoData={
+      Object {
+        "Web JVM": Object {
+          "Max Memory": "2Gb",
+        },
+      }
+    }
+  />
+  <HealthCard
+    key="Compute Engine"
+    name="Compute Engine"
+    onClick={[Function]}
+    open={true}
+    sysInfoData={
+      Object {
+        "Compute Engine": Object {
+          "Pending": 4,
+        },
+      }
+    }
+  />
+  <HealthCard
+    key="Search Engine"
+    name="Search Engine"
+    onClick={[Function]}
+    open={false}
+    sysInfoData={
+      Object {
+        "Search": Object {
+          "Number of Nodes": 1,
+        },
+      }
+    }
+  />
+</ul>
+`;

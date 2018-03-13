@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render tags popup correctly 1`] = `
+<BubblePopup
+  customClass="bubble-popup-menu bubble-popup-bottom"
+>
+  <SelectList
+    currentItem="MAJOR"
+    items={
+      Array [
+        "BLOCKER",
+        "CRITICAL",
+        "MAJOR",
+        "MINOR",
+        "INFO",
+      ]
+    }
+    onSelect={[MockFunction]}
+  >
+    <SelectListItem
+      item="BLOCKER"
+      key="BLOCKER"
+    >
+      <SeverityIcon
+        className="little-spacer-right"
+        severity="BLOCKER"
+      />
+      severity.BLOCKER
+    </SelectListItem>
+    <SelectListItem
+      item="CRITICAL"
+      key="CRITICAL"
+    >
+      <SeverityIcon
+        className="little-spacer-right"
+        severity="CRITICAL"
+      />
+      severity.CRITICAL
+    </SelectListItem>
+    <SelectListItem
+      item="MAJOR"
+      key="MAJOR"
+    >
+      <SeverityIcon
+        className="little-spacer-right"
+        severity="MAJOR"
+      />
+      severity.MAJOR
+    </SelectListItem>
+    <SelectListItem
+      item="MINOR"
+      key="MINOR"
+    >
+      <SeverityIcon
+        className="little-spacer-right"
+        severity="MINOR"
+      />
+      severity.MINOR
+    </SelectListItem>
+    <SelectListItem
+      item="INFO"
+      key="INFO"
+    >
+      <SeverityIcon
+        className="little-spacer-right"
+        severity="INFO"
+      />
+      severity.INFO
+    </SelectListItem>
+  </SelectList>
+</BubblePopup>
+`;

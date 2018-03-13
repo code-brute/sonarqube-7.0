@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<Select
+  autofocus={true}
+  className="Select-big"
+  clearable={false}
+  filterOptions={[Function]}
+  isLoading={true}
+  noResultsText="no_results"
+  onChange={[MockFunction]}
+  onInputChange={[Function]}
+  optionRenderer={[Function]}
+  options={Array []}
+  placeholder=""
+  searchable={true}
+  value="group:lambda"
+  valueRenderer={[Function]}
+/>
+`;

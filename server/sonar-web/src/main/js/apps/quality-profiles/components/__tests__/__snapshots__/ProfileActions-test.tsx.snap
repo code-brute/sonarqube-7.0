@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with all permissions 1`] = `
+<ActionsDropdown>
+  <ActionsDropdownItem
+    id="quality-profile-activate-more-rules"
+    to="/organizations/org/rules#qprofile=foo|activation=false"
+  >
+    quality_profiles.activate_more_rules
+  </ActionsDropdownItem>
+  <ActionsDropdownItem
+    download="foo.xml"
+    id="quality-profile-backup"
+    to="/api/qualityprofiles/backup?profileKey=foo"
+  >
+    backup_verb
+  </ActionsDropdownItem>
+  <ActionsDropdownItem
+    id="quality-profile-compare"
+    to={
+      Object {
+        "pathname": "/organizations/org/quality_profiles/compare",
+        "query": Object {
+          "language": "java",
+          "name": "Foo",
+        },
+      }
+    }
+  >
+    compare
+  </ActionsDropdownItem>
+  <ActionsDropdownItem
+    id="quality-profile-copy"
+    onClick={[Function]}
+  >
+    copy
+  </ActionsDropdownItem>
+  <ActionsDropdownItem
+    id="quality-profile-rename"
+    onClick={[Function]}
+  >
+    rename
+  </ActionsDropdownItem>
+  <ActionsDropdownItem
+    id="quality-profile-set-as-default"
+    onClick={[Function]}
+  >
+    set_as_default
+  </ActionsDropdownItem>
+  <ActionsDropdownDivider />
+  <ActionsDropdownItem
+    destructive={true}
+    id="quality-profile-delete"
+    onClick={[Function]}
+  >
+    delete
+  </ActionsDropdownItem>
+</ActionsDropdown>
+`;
+
+exports[`renders with no permissions 1`] = `
+<ActionsDropdown>
+  <ActionsDropdownItem
+    download="foo.xml"
+    id="quality-profile-backup"
+    to="/api/qualityprofiles/backup?profileKey=foo"
+  >
+    backup_verb
+  </ActionsDropdownItem>
+  <ActionsDropdownItem
+    id="quality-profile-compare"
+    to={
+      Object {
+        "pathname": "/organizations/org/quality_profiles/compare",
+        "query": Object {
+          "language": "java",
+          "name": "Foo",
+        },
+      }
+    }
+  >
+    compare
+  </ActionsDropdownItem>
+</ActionsDropdown>
+`;
+
+exports[`renders with permission to edit only 1`] = `
+<ActionsDropdown>
+  <ActionsDropdownItem
+    id="quality-profile-activate-more-rules"
+    to="/organizations/org/rules#qprofile=foo|activation=false"
+  >
+    quality_profiles.activate_more_rules
+  </ActionsDropdownItem>
+  <ActionsDropdownItem
+    download="foo.xml"
+    id="quality-profile-backup"
+    to="/api/qualityprofiles/backup?profileKey=foo"
+  >
+    backup_verb
+  </ActionsDropdownItem>
+  <ActionsDropdownItem
+    id="quality-profile-compare"
+    to={
+      Object {
+        "pathname": "/organizations/org/quality_profiles/compare",
+        "query": Object {
+          "language": "java",
+          "name": "Foo",
+        },
+      }
+    }
+  >
+    compare
+  </ActionsDropdownItem>
+  <ActionsDropdownItem
+    id="quality-profile-rename"
+    onClick={[Function]}
+  >
+    rename
+  </ActionsDropdownItem>
+</ActionsDropdown>
+`;
