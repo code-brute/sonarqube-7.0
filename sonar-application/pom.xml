@@ -91,7 +91,6 @@
       <artifactId>h2</artifactId>
       <scope>provided</scope>
     </dependency>
-
     <!-- default plugins -->
   <!--  <dependency>
       <groupId>org.sonarsource.java</groupId>
